@@ -1,5 +1,16 @@
-import React from "react"
+import React from 'react';
 
-export default function Home() {
-  return <div>Hello world!</div>
+import Normalize from '../styles/Normalize';
+import Typography from '../styles/Typography';
+import GlobalStyle from '../styles/GlobalStyle';
+
+export default function Index() {
+  return (
+    <div>
+      <Normalize />
+      <GlobalStyle />
+      <Typography />
+      <h1>Hej!</h1>
+    </div>
+  )
 }

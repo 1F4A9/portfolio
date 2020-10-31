@@ -4,8 +4,6 @@
 
 👉 `The website is not available yet` 👈
 <br/>
-* * *
-
 
 ## Technologies ✨
 * Gatsby

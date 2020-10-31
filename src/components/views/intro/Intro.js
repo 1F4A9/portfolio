@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Laptop from './Laptop';
+
 const Container = styled.header`
   height: 100vh;
   width: 100%;
@@ -14,7 +16,7 @@ const Container = styled.header`
 export default function Intro() {
   return (
     <Container>
-      <h1>Intro section!</h1>
+      <Laptop />
     </Container>
   )
 }

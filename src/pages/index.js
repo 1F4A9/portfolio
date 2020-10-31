@@ -13,6 +13,8 @@ import GlobalStyle from '../styles/GlobalStyle';
 const Container = styled.div`
   height: 100%;
   width: 100%;
+
+  padding: 0 var(--padding-lg);
 `;
 
 export default function Index() {

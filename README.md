@@ -8,5 +8,3 @@
 ## Technologies ✨
 * Gatsby
 * Styled-components
-
-<br/>

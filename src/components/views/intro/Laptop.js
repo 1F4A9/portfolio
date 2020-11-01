@@ -13,8 +13,8 @@ const Top = styled.div`
   height: 100%;
   width: 100%;
 
-  padding-left: var(--padding-lg);
-  padding-right: var(--padding-lg);
+  padding-left: var(--padding-xl);
+  padding-right: var(--padding-xl);
 `;
 
 const Frame = styled.div`
@@ -31,10 +31,27 @@ const Frame = styled.div`
   border: 1px solid var(--black);
   border-radius: var(--border-radius-lg);
 
-  border-bottom-left-radius: var(--border-radius-sm);
-  border-bottom-right-radius: var(--border-radius-sm);
+  border-bottom-left-radius: var(--border-radius-xs);
+  border-bottom-right-radius: var(--border-radius-xs);
 
   background-color: var(--black);
+
+  ::before {
+    content: '';
+    position: absolute;
+
+    height: 10px;
+    width: 10px;
+
+    border-radius: 8px;
+    background: #4a484a;
+    box-shadow: inset 1px 1px 2px #393739, 
+                inset -1px -1px 2px #5b595b;
+
+    top: 0.875rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
   ::after {
     content: 'ASUS ZenBook';

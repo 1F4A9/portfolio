@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
     --margin-base: 1rem;
     --margin-lg: 1.375rem;
     
+    --border-radius-xs: 0.25rem;
     --border-radius-sm: 0.375rem;
     --border-radius-base: 0.5rem;
     --border-radius-lg: 1rem;

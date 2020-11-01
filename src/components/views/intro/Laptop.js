@@ -1,12 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Typewriter from './Typewriter';
+
 const Container = styled.div`
   width: 100%;
   height: calc(60vw);
   flex: 1;
 
   padding: 0 var(--padding-lg);
+
+  @media (min-width: 1140px) {
+    height: 684px;
+
+    max-width: 1080px;
+  }
 `;
 
 const Top = styled.div`
@@ -69,15 +77,6 @@ const Frame = styled.div`
   }
 `;
 
-const Screen = styled.div`
-  width: 100%;
-  height: 100%;
-
-  background-color: white;
-
-  border: 1px solid var(--black);
-`;
-
 const BaseTop = styled.div`
   height: 1.25rem;
   width: 100%;
@@ -117,7 +116,7 @@ export default function Laptop() {
     <Container>
       <Top>
         <Frame>
-          <Screen />
+          <Typewriter />
         </Frame>
       </Top>
       <BaseTop>

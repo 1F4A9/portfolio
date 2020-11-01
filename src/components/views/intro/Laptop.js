@@ -36,13 +36,13 @@ const Frame = styled.div`
   padding-bottom: var(--padding-xxl);
   padding-right: var(--padding-lg);
 
-  border: 1px solid var(--black);
   border-radius: var(--border-radius-lg);
 
   border-bottom-left-radius: var(--border-radius-xs);
   border-bottom-right-radius: var(--border-radius-xs);
 
-  background-color: var(--black);
+  background-color: var(--laptop-base-color);
+  border: 1px solid var(--laptop-border-frame-color);
 
   ::before {
     content: '';
@@ -81,7 +81,7 @@ const BaseTop = styled.div`
   height: 1.25rem;
   width: 100%;
 
-  border-top: 2px solid var(--laptop-border-color);
+  border-top: 2px solid var(--laptop-border-base-color);
   border-left: var(--laptop-base-color);
   border-right: var(--laptop-base-color);
 

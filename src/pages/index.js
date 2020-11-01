@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Nav from '../components/nav/Nav';
 import Intro from '../components/views/intro/Intro';
 import Skills from '../components/views/skills/Skills';
 import Projects from '../components/views/projects/Projects';
@@ -24,6 +25,7 @@ export default function Index() {
       <GlobalStyle />
       <Typography />
 
+      <Nav />
       <Intro />
       <Skills />
       <Projects />

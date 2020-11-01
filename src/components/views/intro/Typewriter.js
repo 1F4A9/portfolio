@@ -20,6 +20,8 @@ const blink = keyframes`
 const Container = styled.div`
   height: 100%;
 
+  overflow-y: auto;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -27,6 +29,24 @@ const Container = styled.div`
   padding: var(--padding-sm);
 
   background-color: #2e3440;
+
+  /* Scrollbar Styles */
+  ::-webkit-scrollbar {
+  width: 12px;
+  }
+
+  scrollbar-width: thin;
+  scrollbar-color: #656D7E #111A2C;
+
+  ::-webkit-scrollbar-track {
+    background: #111A2C;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #656D7E;
+    border-radius: 6px;
+    border: 3px solid #656D7E;
+  }
 `;
 
 const Paragraph = styled.p`
@@ -57,7 +77,7 @@ let data = [
   `I study front-end and will graduate in ${calcDiffInTimeWith('2021-05-28', 'days')} days.`,
   `I have serious passion for solid solutions and  refuse to settle for anything less.`,
   `I dream and speak Javascript, and no i'm not talking about nightmares ;-)`,
-  `The source code.`,
+  `The source code [gör till git länk].`,
 ];
 
 export default function Typewriter() {

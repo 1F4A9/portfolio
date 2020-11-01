@@ -27,6 +27,7 @@ const GlobalStyle = createGlobalStyle`
     --border-radius-xl: 1.75rem;
 
     --laptop-base-color: #383838;
+    --laptop-bottom-base-color: #232328;
     --laptop-border-color: #db8759;
   }
 

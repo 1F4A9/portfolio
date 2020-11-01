@@ -61,7 +61,7 @@ const Frame = styled.div`
     font-weight: 400;
     font-size: 1rem;
 
-    color: white;
+    color: #f8dad3;
 
     top: 100%;
     left: 50%;
@@ -86,7 +86,7 @@ const BaseTop = styled.div`
   border-left: var(--laptop-base-color);
   border-right: var(--laptop-base-color);
 
-  border-bottom: 10px solid var(--laptop-base-color);
+  border-bottom: 10px solid var(--laptop-bottom-base-color);
 
   border-bottom-left-radius: 40%;
   border-bottom-right-radius: 40%;
@@ -99,12 +99,16 @@ const BaseTop = styled.div`
 
   .cover {
     flex: 2;
-    background-color: var(--laptop-base-color);
+
+    background: var(--laptop-base-color);
+    background: linear-gradient(180deg, rgba(56,56,56,1) 15%, rgba(48,48,50,1) 41%, rgba(44,44,47,1) 62%, rgba(38,38,42,1) 80%, rgba(35,35,40,1) 95%);
   }
 
   .center {
     flex: 1;
-    background-color: white;
+    background: #585353;
+    background: linear-gradient(90deg, rgba(35,35,40,1) 3%, rgba(49,49,51,1) 7%, rgba(56,56,56,1) 12%, rgba(56,56,56,1) 88%, rgba(49,49,51,1) 93%, rgba(35,35,40,1) 97%);
+    z-index: 1;
   }
 `;
 

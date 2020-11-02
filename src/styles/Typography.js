@@ -40,7 +40,7 @@ const Typography = createGlobalStyle`
   }
 
   body {
-    color: var(--color-text-body);
+    color: var(--color-grey);
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: normal;
     word-wrap: break-word;

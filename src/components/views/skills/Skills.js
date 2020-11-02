@@ -24,11 +24,11 @@ const Container = styled.section`
   }
 `;
 
-export default function Skills() {
+export default function Skills({ image }) {
   return (
     <Container>
       <h1 className="ignore-rhythm">My skills</h1>
-      <Wrapper />
+      <Wrapper image={image} />
     </Container>
   )
 }

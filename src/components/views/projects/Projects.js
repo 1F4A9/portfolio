@@ -1,20 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Card from './Card';
+import Wrapper from './Wrapper';
+
 const Container = styled.section`
   height: 100vh;
   width: 100%;
   
   border-bottom: 1px solid var(--black);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+
+  h1 {
+    color: var(--color-grey);
+    font-size: 3rem;
+  }
 `;
 
 export default function Projects() {
   return (
     <Container>
-      <h1>Project section!</h1>
+      <h1>My projects</h1>
+      <Wrapper />
     </Container>
   )
 }

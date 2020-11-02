@@ -28,11 +28,11 @@ const Container = styled.div`
 
   padding: var(--padding-sm);
 
-  background-color: #2e3440;
+  background-color: var(--color-outer-space);
 
   /* Scrollbar Styles */
   ::-webkit-scrollbar {
-  width: 12px;
+    width: 12px;
   }
 
   scrollbar-width: thin;
@@ -50,7 +50,7 @@ const Container = styled.div`
 `;
 
 const Paragraph = styled.p`
-  color: #86bfcf;
+  color: var(--color-dark-sky);
   font-size: 1.2rem;
   font-weight: 400;
 `;

@@ -11,6 +11,10 @@ const GlobalStyle = createGlobalStyle`
     --color-text-head: #2E2E2E;
     --color-text-body: #2E2E2E;
 
+    --color-dark-sky: #86BFCF;
+    --color-outer-space: #2E3440;
+    --color-grey: #7F8080;
+
     --padding-sm: 0.75rem;
     --padding-base: 1rem;
     --padding-lg: 1.375rem;

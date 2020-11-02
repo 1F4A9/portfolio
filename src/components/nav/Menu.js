@@ -3,7 +3,9 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   height: 100vh;
-  width: 30vw;
+  width: ${props => props.isMenuActive ? '30vw' : '0vw'};
+
+  transition: 0.3s;
 
   position: fixed;
   right: 0;
@@ -13,9 +15,9 @@ const Container = styled.div`
   z-index: 2;
 `;
 
-export default function Menu() {
+export default function Menu({ isMenuActive }) {
   return (
-    <Container>
+    <Container isMenuActive={isMenuActive} >
 
     </Container>
   )

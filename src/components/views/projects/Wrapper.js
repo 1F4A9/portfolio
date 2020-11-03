@@ -12,11 +12,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 
-  @media (min-width: 1140px) {
-    max-width: 1080px;
+  @media (min-width: 1440px) {
+    max-width: 1440px;
   }
 `;
 
@@ -27,8 +26,10 @@ export default function Wrapper() {
         edges {
           node {
             childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
+              fluid(maxWidth: 700, maxHeight: 530, fit: FILL, grayscale: true) 
+              {
+                ...GatsbyImageSharpFluid,
+                originalName
               }
             }
           }
@@ -41,7 +42,7 @@ export default function Wrapper() {
 
   return (
     <Container>
-      {arr.map((node, i) => <Card key={i} node={node} />)}
+      {arr.map((node, i) => <Card key={i} childImageSharp={node.node.childImageSharp} />)}
     </Container>
   )
 }

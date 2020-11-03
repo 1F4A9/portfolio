@@ -28,6 +28,8 @@ const Top = styled.div`
 const Frame = styled.div`
   height: 100%;
   width: 100%;
+  
+  box-shadow: 0px -6px 35px 5px rgba(0,0,0,0.48);
 
   position: relative;
 
@@ -95,6 +97,8 @@ const BaseTop = styled.div`
 
   display: flex;
   flex-direction: row;
+
+  box-shadow: 0px 11px 30px 2px rgba(0,0,0,0.37);
 
   .cover {
     flex: 2;

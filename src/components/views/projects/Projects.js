@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Card from './Card';
 import Wrapper from './Wrapper';
 
 const Container = styled.section`
-  height: 100vh;
+  height: 100%;
   width: 100%;
   
   border-bottom: 1px solid var(--black);

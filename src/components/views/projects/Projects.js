@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import Wrapper from './Wrapper';
 
 const Container = styled.section`
-  height: 100%;
   width: 100%;
+  min-height: 100%;
   
   border-bottom: 1px solid var(--black);
   display: flex;

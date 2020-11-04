@@ -1,28 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import StyledImage from './Image';
 import { removeFilePathSuffix, capitalizer, replaceDashWithSpace } from '../../../utils/stringManipulation';
 
-const Container = styled.div`
-  display: flex;
-  flex: 1 1 33%;
+const Container = styled.a`
+  display: block;
 
-  max-width: 400px;
-  height: 300px;
-  margin: var(--margin-lg);
-
-  @media (max-width: 820px) {
-    flex: 1 1 100%;
-    max-width: 100%;
-    max-height: 100%;
-    margin: var(--margin-lg) 0;
-  }
-
-  box-shadow: 0 8px 20px rgba(0,0,0,3.5);
-`;
-
-const Main = styled.a`
   height: 100%;
   width: 100%;
 
@@ -32,8 +15,6 @@ const Main = styled.a`
 
   :hover {
     cursor: pointer;
-    background-color: rgba(22, 173, 227, 0);
-    box-shadow: 0 8px 25px rgba(0,0,0,3.5);
 
     span {
       top: 50%;
@@ -64,11 +45,8 @@ export default function Card({ childImageSharp }) {
   let title = capitalizer(replaceDashWithSpace(removeFilePathSuffix(originalName)));
 
   return (
-    <Container>
-      <Main href={`https://github.com/hipp0campus/${removeFilePathSuffix(originalName)}`} target="blank" >
-        <Title>{title}</Title>
-        <StyledImage fluid={fluid} />
-      </Main>
+    <Container href={`https://github.com/hipp0campus/${removeFilePathSuffix(originalName)}`} target="blank" >
+      <Title>{title}</Title>
     </Container>
   )
 }

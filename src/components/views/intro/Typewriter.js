@@ -22,6 +22,8 @@ const Container = styled.div`
 
   overflow-y: auto;
 
+  box-shadow: inset 0px 0px 15px -6px #131a28;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;

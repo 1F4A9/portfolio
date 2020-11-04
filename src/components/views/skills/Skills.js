@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Wrapper from './Wrapper';
+import SlideShow from './SlideShow';
+import Icons from './Icons';
 
 const Container = styled.section`
   height: 100vh;
@@ -24,11 +25,15 @@ const Container = styled.section`
   }
 `;
 
-export default function Skills({ image }) {
+export default function Skills() {
   return (
     <Container>
       <h1 className="ignore-rhythm">My skills</h1>
-      <Wrapper image={image} />
+      <SlideShow>
+        <Icons set={1} />
+        <Icons set={2} />
+        <Icons set={1} />
+      </SlideShow>
     </Container>
   )
 }

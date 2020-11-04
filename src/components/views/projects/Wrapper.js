@@ -12,7 +12,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
 
   @media (min-width: 1440px) {
     max-width: 1440px;

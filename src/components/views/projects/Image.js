@@ -22,7 +22,9 @@ const StyledImage = styled(Image)`
   background-repeat: repeat-y;
   background-size: cover;
 
-  background-color: #16ADE3;
+  border-radius: var(--border-radius-xs);
+
+  background-color: var(--color-blue-sky);
   background-blend-mode: overlay;
   mask-image: linear-gradient(to top, transparent -50%, black 100%);
 `

@@ -6,13 +6,11 @@ import { removeFilePathSuffix, capitalizer, replaceDashWithSpace } from '../../.
 
 const Container = styled.div`
   display: flex;
+  flex: 1 1 33%;
 
   max-width: 400px;
   height: 300px;
-
   margin: var(--margin-lg);
-
-  flex: 1 1 33%;
 
   @media (max-width: 820px) {
     flex: 1 1 100%;
@@ -21,7 +19,7 @@ const Container = styled.div`
     margin: var(--margin-lg) 0;
   }
 
-  box-shadow: 0 16px 0 rgba(30,30,32,5.2) inset, 0 8px 20px rgba(0,0,0,3.5);
+  box-shadow: 0 8px 20px rgba(0,0,0,3.5);
 `;
 
 const Main = styled.a`
@@ -35,6 +33,7 @@ const Main = styled.a`
   :hover {
     cursor: pointer;
     background-color: rgba(22, 173, 227, 0);
+    box-shadow: 0 8px 25px rgba(0,0,0,3.5);
 
     span {
       top: 50%;

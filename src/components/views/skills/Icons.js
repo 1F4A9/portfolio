@@ -7,41 +7,27 @@ import { RiStackFill } from "react-icons/ri";
 const Container = styled.div`
   display: flex;
 
-  svg {
-    height: 100%;
-    color: var(--color-grey);
-    flex: 0 0 20%;
+    svg {
+      height: 100%;
+      width: 100%;
+      margin: var(--margin-base) var(--margin-lg);
+      margin-bottom: 0.2rem;
   }
 `;
 
-export default function Icons({ set }) {
-  let icon = null;
-
-  if (set === 1) {
-    icon =
-      <>
-        <SiJavascript />
-        <FaReact />
-        <FaNode />
-        <RiStackFill />
-        <SiGatsby />
-      </>
-  }
-
-  if (set === 2) {
-    icon =
-      <>
-        <FaHtml5 />
-        <FaCss3Alt />
-        <FaSass />
-        <SiStyledComponents />
-        <FaGithub />
-      </>
-  }
-
+export default function Icons() {
   return (
     <Container>
-      {icon}
+      <SiJavascript />
+      <FaReact />
+      <FaNode />
+      <RiStackFill />
+      <SiGatsby />
+      <FaHtml5 />
+      <FaCss3Alt />
+      <FaSass />
+      <SiStyledComponents />
+      <FaGithub />
     </Container>
   )
 }

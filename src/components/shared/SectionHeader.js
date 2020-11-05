@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   width: 100%;
-  flex: 1;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -34,9 +33,8 @@ const Container = styled.div`
     }
   }
 
-  h1 {
+  h2 {
     margin: 0 0 0.5rem 0;
-    color: var(--color-grey);
     font-size: clamp(1.8rem, 4vw, 2.8rem);
   }
 
@@ -45,7 +43,7 @@ const Container = styled.div`
     position: relative;
 
     ::after {
-      content: '';
+      ${props => props.border ? `content: ""` : ''};
       position: absolute;
       bottom: 0;
       left: 0;
@@ -57,11 +55,16 @@ const Container = styled.div`
   }
 `;
 
-export default function Header() {
+export default function SectionHeader({ children, options }) {
+  let { title, border } = options;
+
+  if (!border) border = false;
+
   return (
-    <Container>
+    <Container border={border} >
       <div className="content">
-        <h1>My projects</h1>
+        <h2>{title}</h2>
+        {children}
       </div>
       <div className="none"></div>
       <div className="none"></div>

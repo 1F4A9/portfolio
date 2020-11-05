@@ -2,12 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Wrapper from './Wrapper';
-import Header from './Header';
+import SectionHeader from '../../shared/SectionHeader';
 
 const Container = styled.section`
   width: 100%;
-  
-  border-bottom: 1px solid var(--black);
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -17,7 +16,7 @@ const Container = styled.section`
 export default function Projects() {
   return (
     <Container>
-      <Header />
+      <SectionHeader options={{ title: 'projects', border: true }} />
       <Wrapper />
     </Container>
   )

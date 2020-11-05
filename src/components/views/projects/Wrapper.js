@@ -6,7 +6,6 @@ import StyledImage from './BackgroundImage';
 
 const Container = styled.div`
   width: 100%;
-  flex: 1;
 
   position: relative;
 

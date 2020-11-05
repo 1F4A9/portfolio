@@ -29,7 +29,7 @@ const Container = styled.div`
     flex: 0 0 100%;
     height: 50%;
     
-    animation: ${slide} 17s linear infinite;
+    animation: ${slide} 25s linear infinite;
   }
 `;
 

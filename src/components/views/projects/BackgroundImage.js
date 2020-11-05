@@ -6,7 +6,9 @@ import Card from './Card';
 
 const Container = styled.div`
   box-shadow: 0 8px 20px rgba(0,0,0,3.5);
-  margin: var(--margin-lg);
+  margin: var(--margin-base);
+  display: flex;
+  flex: 0 0 29%;
 
   :hover {
     box-shadow: 0 8px 28px rgba(0,0,0,3.5);
@@ -31,15 +33,11 @@ const Image = ({ childImageSharp, className }) => {
 }
 
 const StyledImage = styled(Image)`
-  @media (max-width: 820px) {
+  display: flex;
+  flex: 1;
+  height: calc(30vw / 1.33);
 
-  }
-
-  flex: 1 1 30%;
-  height: 400px;
-  width: 480px;
-
-  background-position: center center;
+  background-position: center fixed;
   background-repeat: no-repeat;
 
   border-radius: var(--border-radius-xs);
@@ -47,7 +45,6 @@ const StyledImage = styled(Image)`
   background-color: var(--color-blue-sky);
   background-blend-mode: overlay;
   mask-image: linear-gradient(to top, transparent -50%, black 100%);
-
 `
 
 export default StyledImage;

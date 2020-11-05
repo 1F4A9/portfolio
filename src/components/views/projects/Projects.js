@@ -5,13 +5,12 @@ import Wrapper from './Wrapper';
 
 const Container = styled.section`
   width: 100%;
-  min-height: 100%;
   
   border-bottom: 1px solid var(--black);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: stretch;
 
   h1 {
     color: var(--color-grey);

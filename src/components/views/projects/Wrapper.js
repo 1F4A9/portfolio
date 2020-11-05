@@ -6,6 +6,7 @@ import StyledImage from './BackgroundImage';
 
 const Container = styled.div`
   width: 100%;
+  flex: 1;
 
   position: relative;
 
@@ -26,7 +27,7 @@ export default function Wrapper() {
         edges {
           node {
             childImageSharp {
-              fluid(maxWidth: 480, maxHeight: 400, fit: FILL, grayscale: true) 
+              fluid(maxWidth: 532, maxHeight: 400, fit: FILL, grayscale: true) 
               {
                 ...GatsbyImageSharpFluid,
                 originalName

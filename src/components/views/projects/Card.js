@@ -4,10 +4,7 @@ import styled from 'styled-components';
 import { removeFilePathSuffix, capitalizer, replaceDashWithSpace } from '../../../utils/stringManipulation';
 
 const Container = styled.a`
-  display: block;
-
-  height: 100%;
-  width: 100%;
+  flex: 1;
 
   position: relative;
 

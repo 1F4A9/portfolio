@@ -14,10 +14,6 @@ const Container = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-
-  /* @media (min-width: 1440px) {
-    max-width: 1440px;
-  } */
 `;
 
 export default function Wrapper() {

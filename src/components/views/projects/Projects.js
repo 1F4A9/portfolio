@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Wrapper from './Wrapper';
+import Header from './Header';
 
 const Container = styled.section`
   width: 100%;
@@ -9,19 +10,14 @@ const Container = styled.section`
   border-bottom: 1px solid var(--black);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: stretch;
-
-  h1 {
-    color: var(--color-grey);
-    font-size: 3rem;
-  }
+  justify-content: flex-start;
+  align-items: flex-start;
 `;
 
 export default function Projects() {
   return (
     <Container>
-      <h1>My projects</h1>
+      <Header />
       <Wrapper />
     </Container>
   )

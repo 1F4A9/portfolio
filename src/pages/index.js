@@ -26,8 +26,8 @@ export default function Index() {
 
       <Nav />
       <Intro />
-      <Skills />
       <Projects />
+      <Skills />
       <Contact />
     </Container>
   )

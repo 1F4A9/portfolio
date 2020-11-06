@@ -17,9 +17,12 @@ const Container = styled.div`
 
 export default function Mail() {
   const [mailData, setMailData] = useState({});
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   function onSubmit(e) {
     e.preventDefault();
+
+    setIsSubmitted(true);
 
     console.log(mailData)
   }
@@ -34,6 +37,7 @@ export default function Mail() {
             label="Name | Company"
             setMailData={setMailData}
             mailData={mailData}
+            isSubmitted={isSubmitted}
           />
         </div>
         <div className="form-group">
@@ -43,6 +47,7 @@ export default function Mail() {
             label="Email"
             setMailData={setMailData}
             mailData={mailData}
+            isSubmitted={isSubmitted}
           />
         </div>
         <div className="form-group">
@@ -52,6 +57,7 @@ export default function Mail() {
             label="Subject"
             setMailData={setMailData}
             mailData={mailData}
+            isSubmitted={isSubmitted}
           />
         </div>
         <div className="form-group">
@@ -61,10 +67,11 @@ export default function Mail() {
             label="Message"
             setMailData={setMailData}
             mailData={mailData}
+            isSubmitted={isSubmitted}
           />
         </div>
         <div className="form-group">
-          <CustomSubmit />
+          <CustomSubmit isSubmitted={isSubmitted} />
         </div>
       </form>
     </Container>

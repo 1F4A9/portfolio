@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const StyledInput = styled.input`
@@ -56,9 +56,16 @@ const StyledLabel = styled.label`
   transition: all 0.2s ease-in-out;
 `;
 
-export default function CustomInput({ type, name, label, setMailData, mailData }) {
+export default function CustomInput({ type, name, label, setMailData, mailData, isSubmitted }) {
   const [isActive, setIsActive] = useState(false);
   const [userInput, setUserInput] = useState('');
+
+  useEffect(() => {
+    if (isSubmitted) {
+      setUserInput('');
+      setIsActive(false);
+    }
+  }, [isSubmitted])
 
   function onFocus() {
     setIsActive(true);

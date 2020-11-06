@@ -34,7 +34,10 @@ const Container = styled.div`
   }
 
   h2 {
-    margin: 0 0 0.5rem 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: calc(var(--margin-base) / 2);
+    margin-left: 0;
     font-size: clamp(1.8rem, 4vw, 2.8rem);
   }
 
@@ -49,7 +52,7 @@ const Container = styled.div`
       left: 0;
       width: 100%;
       height: 2px;
-      border-radius: 2px;
+      border-radius: calc(--border-radius-xs / 2);
       background-color: var(--color-blue-sky);
     }
   }

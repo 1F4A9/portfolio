@@ -16,7 +16,6 @@ const StyledSubmit = styled.input`
   background-color: ${props => props.isSubmitted ? '#2f892f9c' : 'rgba(22, 173, 227, .4)'};
   color: var(--color-user-input);
 
-
   transition: all 0.2s ease-in;
 
   :hover {

@@ -27,49 +27,31 @@ export default function Mail() {
     console.log(mailData)
   }
 
+  const inputs = [
+    { type: 'text', name: 'name', label: 'Name | Company' },
+    { type: 'email', name: 'email', label: 'Email' },
+    { type: 'text', name: 'subject', label: 'Subject' },
+    { type: 'textarea', name: 'message', label: 'Message' },
+  ];
+
   return (
     <Container>
       <form onSubmit={onSubmit} >
-        <div className="form-group">
-          <CustomInput
-            type="text"
-            name="name"
-            label="Name | Company"
-            setMailData={setMailData}
-            mailData={mailData}
-            isSubmitted={isSubmitted}
-          />
-        </div>
-        <div className="form-group">
-          <CustomInput
-            type="email"
-            name="email"
-            label="Email"
-            setMailData={setMailData}
-            mailData={mailData}
-            isSubmitted={isSubmitted}
-          />
-        </div>
-        <div className="form-group">
-          <CustomInput
-            type="text"
-            name="subject"
-            label="Subject"
-            setMailData={setMailData}
-            mailData={mailData}
-            isSubmitted={isSubmitted}
-          />
-        </div>
-        <div className="form-group">
-          <CustomInput
-            type="textarea"
-            name="message"
-            label="Message"
-            setMailData={setMailData}
-            mailData={mailData}
-            isSubmitted={isSubmitted}
-          />
-        </div>
+        {inputs.map(({ type, name, label }) => {
+          return (
+            <div className="form-group" key={name}>
+              <CustomInput
+                type={type}
+                name={name}
+                label={label}
+                setMailData={setMailData}
+                mailData={mailData}
+                isSubmitted={isSubmitted}
+                setIsSubmitted={setIsSubmitted}
+              />
+            </div>
+          )
+        })}
         <div className="form-group">
           <CustomSubmit isSubmitted={isSubmitted} />
         </div>

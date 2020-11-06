@@ -15,6 +15,8 @@ const GlobalStyle = createGlobalStyle`
     --color-blue-sky: #16ADE3;
     --color-outer-space: #2E3440;
     --color-grey: #7F8080;
+    --color-user-input: #E5E6E6;
+    --color-form: #252525;
 
     --padding-xs: 0.375rem;
     --padding-sm: 0.75rem;
@@ -38,6 +40,8 @@ const GlobalStyle = createGlobalStyle`
     --laptop-bottom-base-color: #232328;
     --laptop-border-base-color: #db8759;
     --laptop-border-frame-color: #181818;
+
+    --font-size-form: 1.2rem;
   }
 
   html,

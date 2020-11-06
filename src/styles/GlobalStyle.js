@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
     --color-outer-space: #2E3440;
     --color-grey: #7F8080;
 
+    --padding-xs: 0.375rem;
     --padding-sm: 0.75rem;
     --padding-base: 1rem;
     --padding-lg: 1.375rem;

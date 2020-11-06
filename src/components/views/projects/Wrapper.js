@@ -18,7 +18,7 @@ const Container = styled.div`
 export default function Wrapper() {
   const data = useStaticQuery(graphql`
     query {
-      allFile(filter: {relativePath: {regex: "/png/"}}) {
+      allFile(filter: { relativePath: {regex: "/png/", ne: "profile.jpg"}}) {
         edges {
           node {
             childImageSharp {

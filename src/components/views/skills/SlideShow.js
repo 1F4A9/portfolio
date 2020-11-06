@@ -13,9 +13,9 @@ const slide = keyframes`
 
 const Container = styled.div`
   width: 100%;
+  min-height: 10vh;
 
   position: relative;
-
   overflow-x: hidden;
 
   display: flex;

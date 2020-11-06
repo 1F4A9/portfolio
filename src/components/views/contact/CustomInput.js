@@ -56,7 +56,7 @@ const StyledLabel = styled.label`
   transition: all 0.2s ease-in-out;
 `;
 
-export default function CustomInput({ type, name, label, setMailData, mailData, isSubmitted }) {
+export default function CustomInput({ type, name, label, setMailData, mailData, isSubmitted, setIsSubmitted }) {
   const [isActive, setIsActive] = useState(false);
   const [userInput, setUserInput] = useState('');
 
@@ -68,6 +68,9 @@ export default function CustomInput({ type, name, label, setMailData, mailData, 
   }, [isSubmitted])
 
   function onFocus() {
+    // reset onSubmit message
+    if (isSubmitted) setIsSubmitted(false);
+
     setIsActive(true);
   }
 

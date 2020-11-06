@@ -7,6 +7,16 @@ const StyledInput = styled.input`
   width: 100%;
   border-radius: calc(var(--border-radius-xs) / 2);
   border: none;
+
+  background-color: var(--color-form);
+  color: var(--color-user-input);
+
+  :-webkit-autofill,
+  :-webkit-autofill:hover, 
+  :-webkit-autofill:focus {
+    transition: background-color 5000s;
+    -webkit-text-fill-color: var(--color-user-input) !important;
+  }
 `;
 
 const StyledTextarea = styled.textarea`
@@ -16,6 +26,16 @@ const StyledTextarea = styled.textarea`
   border-radius: calc(var(--border-radius-xs) / 2);
   border: none;
   resize: none;
+
+  background-color: var(--color-form);
+  color: var(--color-user-input);
+
+  :-webkit-autofill,
+  :-webkit-autofill:hover, 
+  :-webkit-autofill:focus {
+    transition: background-color 5000s;
+    -webkit-text-fill-color: var(--color-user-input) !important;
+  }
 `;
 
 const StyledLabel = styled.label`
@@ -30,20 +50,29 @@ const StyledLabel = styled.label`
     'translateY(calc(var(--padding-base) + var(--padding-sm) - 2px - 0.2rem))'
   };
 
-  font-size: ${props => props.isActive ? '0.7rem' : '1.2rem'};
+  letter-spacing: ${props => props.isActive ? 'default' : '-1px'};
+  font-size: ${props => props.isActive ? '0.7rem' : 'var(--font-size-form)'};
   color: ${props => props.isActive ? 'var(--color-blue-sky)' : 'var(color-grey)'};
   transition: all 0.2s ease-in-out;
 `;
 
-export default function CustomInput({ type, name, label }) {
+export default function CustomInput({ type, name, label, setMailData, mailData }) {
   const [isActive, setIsActive] = useState(false);
+  const [userInput, setUserInput] = useState('');
 
   function onFocus() {
     setIsActive(true);
   }
 
   function onBlur() {
-    setIsActive(false);
+    if (!userInput) {
+      setIsActive(false);
+    }
+  }
+
+  function onChange(e) {
+    setMailData({ ...mailData, ...{ [e.target.name]: e.target.value } });
+    setUserInput(e.target.value);
   }
 
   return (
@@ -56,6 +85,8 @@ export default function CustomInput({ type, name, label }) {
           maxlength="200"
           onBlur={onBlur}
           onFocus={onFocus}
+          onChange={onChange}
+          value={userInput}
         />
         :
         <StyledInput
@@ -65,6 +96,8 @@ export default function CustomInput({ type, name, label }) {
           required
           onBlur={onBlur}
           onFocus={onFocus}
+          onChange={onChange}
+          value={userInput}
         />
       }
       <StyledLabel isActive={isActive} htmlFor={name}>{label}</StyledLabel>

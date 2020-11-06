@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import CustomInput from './CustomInput';
+import CustomSubmit from './CustomSubmit';
 
 const Container = styled.div`
   width: 60%;
@@ -15,20 +16,55 @@ const Container = styled.div`
 `;
 
 export default function Mail() {
+  const [mailData, setMailData] = useState({});
+
+  function onSubmit(e) {
+    e.preventDefault();
+
+    console.log(mailData)
+  }
+
   return (
     <Container>
-      <form>
+      <form onSubmit={onSubmit} >
         <div className="form-group">
-          <CustomInput type="text" name="name" label="Name" />
+          <CustomInput
+            type="text"
+            name="name"
+            label="Name | Company"
+            setMailData={setMailData}
+            mailData={mailData}
+          />
         </div>
         <div className="form-group">
-          <CustomInput type="email" name="email" label="Email" />
+          <CustomInput
+            type="email"
+            name="email"
+            label="Email"
+            setMailData={setMailData}
+            mailData={mailData}
+          />
         </div>
         <div className="form-group">
-          <CustomInput type="text" name="subject" label="Subject" />
+          <CustomInput
+            type="text"
+            name="subject"
+            label="Subject"
+            setMailData={setMailData}
+            mailData={mailData}
+          />
         </div>
         <div className="form-group">
-          <CustomInput type="textarea" name="message" label="Message" />
+          <CustomInput
+            type="textarea"
+            name="message"
+            label="Message"
+            setMailData={setMailData}
+            mailData={mailData}
+          />
+        </div>
+        <div className="form-group">
+          <CustomSubmit />
         </div>
       </form>
     </Container>

@@ -49,7 +49,7 @@ const Image = ({ childImageSharp, className }) => {
 const StyledImage = styled(Image)`
   display: flex;
   flex: 1;
-  height: calc(30vw / 1.33);
+  height: calc(28vw / 1.33);
 
   background-position: center fixed;
   background-repeat: no-repeat;

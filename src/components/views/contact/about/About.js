@@ -5,6 +5,7 @@ import { FaUserGraduate, FaCheckSquare, FaHandPeace } from 'react-icons/fa';
 import CenterContent from './CenterContent';
 import ParagraphContainer from './ParagraphContainer';
 import ProfilePicture from './ProfilePicture';
+import { calcDiffInTimeWith } from '../../../../utils/timeHandler';
 
 const Container = styled.div`
   width: 40%;
@@ -26,15 +27,13 @@ const Container = styled.div`
 `;
 
 export default function About() {
-  // Graduates in [days] | graduated 200 [days] ago
-  // Frontend student | [frontend dev]
 
   const paragraphs = [
-    { icon: <FaHandPeace />, paragraph: 'Frontend student' },
-    { icon: <FaUserGraduate />, paragraph: 'Graduates in 190 days' },
-    { icon: <FaCheckSquare />, paragraph: 'Problem solver' },
-    { icon: <FaCheckSquare />, paragraph: 'Driven' },
-    { icon: <FaCheckSquare />, paragraph: 'Eager to learn' },
+    { icon: <FaHandPeace />, paragraph: `Frontend student` },
+    { icon: <FaUserGraduate />, paragraph: `Graduates in ${calcDiffInTimeWith('2021-05-28', 'days')} days` },
+    { icon: <FaCheckSquare />, paragraph: `Problem solver` },
+    { icon: <FaCheckSquare />, paragraph: `Driven` },
+    { icon: <FaCheckSquare />, paragraph: `Eager to learn` },
   ]
 
   return (

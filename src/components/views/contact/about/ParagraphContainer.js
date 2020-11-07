@@ -8,7 +8,7 @@ const Container = styled.span`
   align-items: center;
 
   // width of the largest sentence
-  width: 203px;
+  width: 12.6875rem;
 
   white-space: nowrap;
   margin-left: calc(var(--margin-sm) * 2);

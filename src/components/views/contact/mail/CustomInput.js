@@ -40,6 +40,7 @@ const StyledTextarea = styled.textarea`
 
 const StyledLabel = styled.label`
   position: absolute;
+
   left: calc(var(--padding-xs) + var(--padding-base));
   top: 0;
   pointer-events: none;

@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import About from './About';
-import Mail from './Mail';
+import About from './about/About';
+import Mail from './mail/Mail';
 
 const Container = styled.footer`
   border-top: 1px solid var(--black);
@@ -18,6 +18,33 @@ const Container = styled.footer`
       border: none;
       border-top: 1px solid var(--black);
       width: 100%;
+    }
+
+    .about {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .about,
+    .mail-border {
+      padding: var(--padding-lg) 0;
+    }
+
+    h2 {
+      padding-left: 0;
+    }
+
+    .form-group {
+      padding: var(--padding-sm) 0;
+
+      label {
+        left: var(--padding-xs);
+      }
+    }
+
+    .no-content {
+      display: none;
     }
   }
 `;

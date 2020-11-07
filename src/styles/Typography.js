@@ -71,7 +71,7 @@ const Typography = createGlobalStyle`
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    margin-bottom: 1.45rem;
+    margin-bottom: 0;
     color: inherit;
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: bold;

@@ -12,8 +12,10 @@ const slide = keyframes`
 `;
 
 const Container = styled.div`
-  width: 100%;
-  min-height: 10vh;
+  width: calc(87% + (var(--margin-base) * 5));
+  min-height: 15vh;
+
+  padding: var(--padding-lg) 0;
 
   position: relative;
   overflow-x: hidden;
@@ -22,6 +24,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: flex-start;
   flex-direction: row;
+  align-self: center;
 
   ::before {
     content: '';
@@ -58,7 +61,6 @@ const Container = styled.div`
 
   div {
     flex: 0 0 100%;
-    height: 50%;
     
     animation: ${slide} 85s linear infinite;
   }
@@ -66,7 +68,7 @@ const Container = styled.div`
 
 export default function SlideShow({ children }) {
   return (
-    <Container>
+    <Container className="slideshow">
       {children}
     </Container>
   )

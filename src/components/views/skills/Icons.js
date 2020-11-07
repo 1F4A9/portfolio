@@ -6,17 +6,19 @@ import { RiStackFill } from "react-icons/ri";
 
 const Container = styled.div`
   display: flex;
+  align-self: stretch;
+  align-items: center;
 
     svg {
-      height: 100%;
-      width: 100%;
-      margin: var(--margin-base) var(--margin-lg);
+      height: 60%;
+      flex: 1;
+      margin: 0 var(--margin-lg);
   }
 `;
 
 export default function Icons() {
   return (
-    <Container>
+    <Container className="icon-container">
       <SiJavascript />
       <FaReact />
       <FaNode />

@@ -6,6 +6,8 @@ import styled from 'styled-components';
 const Container = styled.div`
   width: 40%;
 
+  padding: var(--padding-lg);
+
   display: flex;
   flex-direction: column;
   align-items: center;

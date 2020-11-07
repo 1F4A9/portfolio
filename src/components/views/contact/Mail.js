@@ -35,7 +35,7 @@ export default function Mail() {
   ];
 
   return (
-    <Container>
+    <Container className="mail-border">
       <form onSubmit={onSubmit} >
         {inputs.map(({ type, name, label }) => {
           return (

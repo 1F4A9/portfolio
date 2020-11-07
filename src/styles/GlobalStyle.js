@@ -42,6 +42,7 @@ const GlobalStyle = createGlobalStyle`
     --laptop-border-frame-color: #181818;
 
     --font-size-form: 1.2rem;
+    --font-size-root: 1rem;
   }
 
   html,

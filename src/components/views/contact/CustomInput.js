@@ -47,7 +47,7 @@ const StyledLabel = styled.label`
   transform: ${props => props.isActive ?
     'translateY(calc(var(--padding-xs) + 4px))'
     :
-    'translateY(calc(var(--padding-base) + var(--padding-sm) - 2px - 0.2rem))'
+    'translateY(calc(var(--padding-base) + var(--padding-sm) - 2px - (var(--font-size-form) * 0.2)))'
   };
 
   letter-spacing: ${props => props.isActive ? 'default' : '-1px'};

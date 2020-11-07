@@ -21,10 +21,6 @@ const Container = styled.span`
   svg {
     margin-right: var(--margin-sm);
   }
-
-  .no-content {
-    // flex-basis: calc((20vw - (var(--padding-lg) * 4)) - 40%);
-  }
 `;
 
 export default function ParagraphContainer({ icon, paragraph }) {

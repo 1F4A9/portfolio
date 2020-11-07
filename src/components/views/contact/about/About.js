@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaUserGraduate, FaGraduationCap } from 'react-icons/fa';
+import { FaUserGraduate, FaCheckSquare, FaHandPeace } from 'react-icons/fa';
 
 import CenterContent from './CenterContent';
 import ParagraphContainer from './ParagraphContainer';
@@ -30,11 +30,11 @@ export default function About() {
   // Frontend student | [frontend dev]
 
   const paragraphs = [
-    { icon: <FaUserGraduate />, paragraph: 'Frontend student' },
-    { icon: <FaGraduationCap />, paragraph: 'Graduates in 190 days' },
-    { icon: <FaUserGraduate />, paragraph: 'Problem solver' },
-    { icon: <FaUserGraduate />, paragraph: 'Driven' },
-    { icon: <FaUserGraduate />, paragraph: 'Eager to learn' },
+    { icon: <FaHandPeace />, paragraph: 'Frontend student' },
+    { icon: <FaUserGraduate />, paragraph: 'Graduates in 190 days' },
+    { icon: <FaCheckSquare />, paragraph: 'Problem solver' },
+    { icon: <FaCheckSquare />, paragraph: 'Driven' },
+    { icon: <FaCheckSquare />, paragraph: 'Eager to learn' },
   ]
 
   return (

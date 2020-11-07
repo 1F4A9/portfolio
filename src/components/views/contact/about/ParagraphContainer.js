@@ -19,6 +19,7 @@ const Container = styled.span`
   }
 
   svg {
+    font-size: var(--font-size-form);
     margin-right: var(--margin-sm);
   }
 `;

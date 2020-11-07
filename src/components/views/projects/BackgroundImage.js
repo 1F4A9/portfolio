@@ -61,11 +61,11 @@ const StyledImage = styled(Image)`
   mask-image: linear-gradient(to top, transparent -50%, black 100%);
 
   @media (max-width: 880px) {
-    height: calc(40vw / 1.33);
+    height: calc(37vw / 1.33);
   }
 
   @media (max-width: 450px) {
-    height: calc(100vw / 1.33);
+    height: calc(87vw / 1.33);
   }
 `
 

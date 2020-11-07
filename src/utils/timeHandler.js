@@ -1,3 +1,7 @@
+// decs: outputs the time difference between present and the given date
+// 
+// arg: ('1990-10-10', 'days')
+
 export function calcDiffInTimeWith(date, format) {
   let dateStart = new Date(date);
   let dateNow = new Date();

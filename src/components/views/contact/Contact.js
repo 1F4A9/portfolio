@@ -46,6 +46,10 @@ const Container = styled.footer`
     .no-content {
       display: none;
     }
+
+    // change email header
+    .short-text { display: block; }
+    .full-text { display: none; }
   }
 `;
 

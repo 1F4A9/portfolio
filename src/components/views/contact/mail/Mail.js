@@ -14,6 +14,10 @@ const Container = styled.div`
     position: relative;
     padding: var(--padding-sm) 0 var(--padding-sm) var(--padding-base);
   }
+
+  .short-text {
+    display: none;
+  }
 `;
 
 export default function Mail() {
@@ -37,7 +41,8 @@ export default function Mail() {
 
   return (
     <Container className="mail-border">
-      <h2>Feel free to drop me an email</h2>
+      <h2 className="full-text">Feel free to drop me an email</h2>
+      <h2 className="short-text">Drop me an email</h2>
       <form onSubmit={onSubmit} >
         {inputs.map(({ type, name, label }) => {
           return (

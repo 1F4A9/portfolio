@@ -58,7 +58,7 @@ const StyledImage = styled(Image)`
 
   background-color: var(--color-blue-sky);
   background-blend-mode: overlay;
-  mask-image: linear-gradient(to top, transparent -50%, black 100%);
+  mask-image: linear-gradient(to top, transparent -30%, black 100%);
 
   @media (max-width: 880px) {
     height: calc(37vw / 1.33);

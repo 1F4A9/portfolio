@@ -8,27 +8,52 @@ const Container = styled.div`
   display: flex;
   align-self: stretch;
   align-items: center;
+`;
 
-    svg {
-      height: 60%;
-      flex: 1;
-      margin: 0 var(--margin-lg);
+const StyledSpan = styled.span`
+  flex: 1;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: clamp(0.7rem, 1vw, 1.6rem);
+  white-space: nowrap;
+
+  svg {
+    height: 50%;
+    width: 100%;
+    margin: 0 var(--margin-lg);
+    padding-bottom: var(--padding-xs);
   }
 `;
 
+
 export default function Icons() {
+  const icons = [
+    { icon: <SiJavascript />, title: 'Javascript' },
+    { icon: <FaReact />, title: 'React.js' },
+    { icon: <FaNode />, title: 'Node.js' },
+    { icon: <RiStackFill />, title: 'Rest API' },
+    { icon: <SiGatsby />, title: 'Gatsby.js' },
+    { icon: <FaHtml5 />, title: 'HTML' },
+    { icon: <FaCss3Alt />, title: 'CSS' },
+    { icon: <FaSass />, title: 'SASS' },
+    { icon: <SiStyledComponents />, title: 'Styled-comp' },
+    { icon: <FaGithub />, title: 'Git' },
+  ]
+
   return (
     <Container className="icon-container">
-      <SiJavascript />
-      <FaReact />
-      <FaNode />
-      <RiStackFill />
-      <SiGatsby />
-      <FaHtml5 />
-      <FaCss3Alt />
-      <FaSass />
-      <SiStyledComponents />
-      <FaGithub />
+      {icons.map(({ icon, title }) => {
+        return (
+          <StyledSpan key={title}>
+            {icon}
+            {title}
+          </StyledSpan>
+        )
+      })}
     </Container>
   )
 }

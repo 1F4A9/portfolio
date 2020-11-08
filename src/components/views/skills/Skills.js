@@ -21,8 +21,8 @@ const Container = styled.section`
 
     .icon-container{
       svg {
-        height: 3.7rem;
-        width: 3.7rem;
+        height: 3.4rem;
+        width: 3.4rem;
       }
     }
   }

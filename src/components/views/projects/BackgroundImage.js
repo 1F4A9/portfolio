@@ -5,7 +5,7 @@ import BackgroundImage from 'gatsby-background-image';
 import Card from './Card';
 
 const Container = styled.div`
-  box-shadow: 0 8px 20px rgba(0,0,0,3.5);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
   display: flex;
   flex: 0 0 29%;
 
@@ -15,7 +15,7 @@ const Container = styled.div`
   transition: opacity 0.3s;
 
   :hover {
-    box-shadow: 0 8px 28px rgba(0,0,0,3.5);
+    box-shadow: 0 8px 20px rgba(0,0,0,5);
     opacity: 0.8;
   }
 

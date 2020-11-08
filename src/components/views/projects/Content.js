@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { removeFilePathSuffix, capitalizer, replaceDashWithSpace } from '../../../utils/stringManipulation';
+import getUsedTechIcons from '../../../utils/getUsedTechIcons';
 
 const StyledAnchorTag = styled.a`
   flex: 1;
@@ -10,13 +11,17 @@ const StyledAnchorTag = styled.a`
   :hover {
     cursor: pointer;
 
-    span {
+    .project__label {
       top: 50%;
+    }
+
+    .project__icon {
+      top: 88%;
     }
   }
 `;
 
-const StyledTitle = styled.span`
+const StyledLabel = styled.span`
   color: var(--color-outer-space);
 
   position: absolute;
@@ -36,17 +41,46 @@ const StyledTitle = styled.span`
   left: 50%;
   transform: translate(-50%, -50%);
 
-  transition: top 0.3s;
+  transition: all 0.3s;
+`;
+
+const StyledIcons = styled.span`
+  position: absolute;
+  width: 100%;
+
+  z-index: 1;
+  top: 160%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: var(--color-outer-space);
+
+  transition: all 0.3s;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  svg {
+    height: 15%;
+    width: 15%;
+  }
 `;
 
 export default function Content({ childImageSharp }) {
   let { fluid } = childImageSharp;
   let { originalName } = fluid;
-  let title = capitalizer(replaceDashWithSpace(removeFilePathSuffix(originalName)));
+  let icons = getUsedTechIcons(removeFilePathSuffix(originalName));
+  let label = capitalizer(replaceDashWithSpace(removeFilePathSuffix(originalName)));
 
   return (
     <StyledAnchorTag href={`https://github.com/hipp0campus/${removeFilePathSuffix(originalName)}`} target="blank" >
-      <StyledTitle>{title}</StyledTitle>
+      <StyledLabel className="project__label">{label}</StyledLabel>
+      <StyledIcons className="project__icon">
+        {icons.map(icon => {
+          return icon
+        })}
+      </StyledIcons>
     </StyledAnchorTag>
   )
 }

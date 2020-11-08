@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import BackgroundImage from 'gatsby-background-image';
 
-import Card from './Card';
+import Content from './Content';
 
 const Container = styled.div`
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
@@ -40,13 +40,13 @@ const Image = ({ childImageSharp, className }) => {
         fluid={fluid}
         backgroundColor={`#040e18`}
       >
-        <Card childImageSharp={childImageSharp} />
+        <Content childImageSharp={childImageSharp} />
       </BackgroundImage>
     </Container>
   )
 }
 
-const StyledImage = styled(Image)`
+const Background = styled(Image)`
   display: flex;
   flex: 1;
   height: calc(28vw / 1.33);
@@ -69,4 +69,4 @@ const StyledImage = styled(Image)`
   }
 `
 
-export default StyledImage;
+export default Background;

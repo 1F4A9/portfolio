@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import Wrapper from './Wrapper';
 import SectionHeader from '../../shared/SectionHeader';
+import Background from './Background';
 
 const Container = styled.section`
   width: 100%;
@@ -14,10 +16,32 @@ const Container = styled.section`
 `;
 
 export default function Projects() {
+  const data = useStaticQuery(graphql`
+    query {
+      allFile(filter: { relativePath: {regex: "/png/", ne: "profile.jpg"}}) {
+        edges {
+          node {
+            childImageSharp {
+              fluid(maxWidth: 532, maxHeight: 400, fit: FILL, grayscale: true) 
+              {
+                ...GatsbyImageSharpFluid,
+                originalName
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  let files = data.allFile.edges;
+
   return (
     <Container>
       <SectionHeader options={{ title: 'projects', border: true }} />
-      <Wrapper />
+      <Wrapper>
+        {files.map(({ node }) => <Background key={node.childImageSharp.fluid.originalName} childImageSharp={node.childImageSharp} />)}
+      </Wrapper>
     </Container>
   )
 }

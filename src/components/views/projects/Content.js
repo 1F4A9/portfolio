@@ -39,7 +39,7 @@ const Title = styled.span`
   transition: top 0.3s;
 `;
 
-export default function Card({ childImageSharp }) {
+export default function Content({ childImageSharp }) {
   let { fluid } = childImageSharp;
   let { originalName } = fluid;
   let title = capitalizer(replaceDashWithSpace(removeFilePathSuffix(originalName)));

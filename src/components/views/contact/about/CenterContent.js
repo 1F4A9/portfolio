@@ -8,7 +8,7 @@ const Container = styled.div`
   display: flex;
 
   .content {
-    flex: 1 0 60%;
+    flex: 1 0 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,7 +16,9 @@ const Container = styled.div`
 
   .no-content {
     height: 100%;
-    flex: 0 1 20%;
+    flex: 0 1 30%;
+
+    background-color: black;
   }
 `;
 

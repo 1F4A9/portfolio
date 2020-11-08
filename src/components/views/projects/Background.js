@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import BackgroundImage from 'gatsby-background-image';
 
-import Content from './Content';
-
 const Container = styled.div`
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
   display: flex;
@@ -29,7 +27,7 @@ const Container = styled.div`
   }
 `;
 
-const Image = ({ childImageSharp, className }) => {
+const Image = ({ childImageSharp, className, children }) => {
   let { fluid } = childImageSharp;
 
   return (
@@ -40,7 +38,7 @@ const Image = ({ childImageSharp, className }) => {
         fluid={fluid}
         backgroundColor={`#040e18`}
       >
-        <Content childImageSharp={childImageSharp} />
+        {children}
       </BackgroundImage>
     </Container>
   )

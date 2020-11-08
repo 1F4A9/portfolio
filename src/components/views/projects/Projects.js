@@ -5,6 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Wrapper from './Wrapper';
 import SectionHeader from '../../shared/SectionHeader';
 import Background from './Background';
+import Content from './Content';
 
 const Container = styled.section`
   width: 100%;
@@ -40,8 +41,18 @@ export default function Projects() {
     <Container>
       <SectionHeader options={{ title: 'projects', border: true }} />
       <Wrapper>
-        {files.map(({ node }) => <Background key={node.childImageSharp.fluid.originalName} childImageSharp={node.childImageSharp} />)}
+        {files.map(({ node }) => {
+          return (
+            <Background
+              key={node.childImageSharp.fluid.originalName}
+              childImageSharp={node.childImageSharp}
+            >
+              <Content childImageSharp={node.childImageSharp} />
+            </Background>
+          )
+        })}
       </Wrapper>
     </Container>
   )
 }
+// {files.map(({ node }) => <Background key={node.childImageSharp.fluid.originalName} childImageSharp={node.childImageSharp} />)}

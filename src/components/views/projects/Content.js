@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { removeFilePathSuffix, capitalizer, replaceDashWithSpace } from '../../../utils/stringManipulation';
 
-const Container = styled.a`
+const StyledAnchorTag = styled.a`
   flex: 1;
   position: relative;
 
@@ -16,7 +16,7 @@ const Container = styled.a`
   }
 `;
 
-const Title = styled.span`
+const StyledTitle = styled.span`
   color: var(--color-outer-space);
 
   position: absolute;
@@ -45,8 +45,8 @@ export default function Content({ childImageSharp }) {
   let title = capitalizer(replaceDashWithSpace(removeFilePathSuffix(originalName)));
 
   return (
-    <Container href={`https://github.com/hipp0campus/${removeFilePathSuffix(originalName)}`} target="blank" >
-      <Title>{title}</Title>
-    </Container>
+    <StyledAnchorTag href={`https://github.com/hipp0campus/${removeFilePathSuffix(originalName)}`} target="blank" >
+      <StyledTitle>{title}</StyledTitle>
+    </StyledAnchorTag>
   )
 }

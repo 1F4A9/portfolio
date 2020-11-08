@@ -1,11 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import BackgroundImage from 'gatsby-background-image';
+import Ribbon from './Ribbon';
 
 const Container = styled.div`
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
   display: flex;
   flex: 0 0 29%;
+
+  position: relative;
 
   margin: var(--margin-base);
 
@@ -32,6 +35,7 @@ const Image = ({ childImageSharp, className, children }) => {
 
   return (
     <Container>
+      <Ribbon label="Github page" />
       <BackgroundImage
         Tag="section"
         className={className}

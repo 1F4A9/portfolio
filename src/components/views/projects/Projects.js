@@ -55,4 +55,3 @@ export default function Projects() {
     </Container>
   )
 }
-// {files.map(({ node }) => <Background key={node.childImageSharp.fluid.originalName} childImageSharp={node.childImageSharp} />)}

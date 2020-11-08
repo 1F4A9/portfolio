@@ -20,10 +20,12 @@ const StyledInput = styled.input`
 `;
 
 const StyledTextarea = styled.textarea`
-  outline: none;
-  padding: var(--padding-base) var(--padding-xs);
+  flex: 1;
+  display: flex;
   width: 100%;
+  padding: var(--padding-base) var(--padding-xs);
   border-radius: calc(var(--border-radius-xs) / 2);
+  outline: none;
   border: none;
   resize: none;
 

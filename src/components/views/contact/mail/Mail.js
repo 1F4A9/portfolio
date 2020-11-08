@@ -5,6 +5,9 @@ import CustomInput from './CustomInput';
 import CustomSubmit from './CustomSubmit';
 
 const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+
   width: 60%;
   border-left: 1px solid var(--black);
   padding: var(--padding-lg);
@@ -13,6 +16,17 @@ const Container = styled.div`
   h2 {
     position: relative;
     padding: var(--padding-sm) 0 var(--padding-sm) var(--padding-base);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .textarea {
+    flex: 1;
+    display: flex;
   }
 
   .short-text {
@@ -46,7 +60,7 @@ export default function Mail() {
       <form onSubmit={onSubmit} >
         {inputs.map(({ type, name, label }) => {
           return (
-            <div className="form-group" key={name}>
+            <div className={`form-group ${type}`} key={name}>
               <CustomInput
                 type={type}
                 name={name}

@@ -14,7 +14,7 @@ const slide = keyframes`
 const Container = styled.div`
   width: calc(87% + (var(--margin-base) * 5));
 
-  padding-top: var(--padding-lg);
+  padding-top: calc(var(--padding-lg) + var(--padding-base));
   padding-bottom: calc(var(--padding-lg) + var(--padding-base));
 
   position: relative;

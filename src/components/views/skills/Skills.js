@@ -8,7 +8,8 @@ import Icons from './Icons';
 const Container = styled.section`
   width: 100%;
 
-  margin-top: 10vw;
+  margin-top: calc(var(--margin-base) + var(--margin-lg));
+  border-top: 1px solid var(--black);
 
   display: flex;
   flex-direction: column;
@@ -45,8 +46,7 @@ const Container = styled.section`
 export default function Skills() {
   return (
     <Container>
-      <SectionHeader options={{ title: 'skills', border: true }}>
-      </SectionHeader>
+      {/* <SectionHeader options={{ title: 'skills', border: true }} /> */}
       <SlideShow>
         <Icons />
         <Icons />

@@ -42,7 +42,11 @@ const Container = styled.div`
   }
 
   .content {
-    margin: var(--margin-base);
+    margin-top: calc(var(--margin-lg) + var(--margin-base));
+    margin-left: var(--margin-lg);
+    margin-right: var(--margin-lg);
+    margin-bottom: var(--margin-lg);
+    
     position: relative;
 
     ::after {
@@ -52,7 +56,7 @@ const Container = styled.div`
       left: 0;
       width: 100%;
       height: 2px;
-      border-radius: calc(--border-radius-xs / 2);
+      border-radius: var(--border-radius-xs);
       background-color: var(--color-blue-sky);
     }
   }
@@ -61,7 +65,7 @@ const Container = styled.div`
 export default function SectionHeader({ children, options }) {
   let { title, border } = options;
 
-  if (!border) border = false;
+  if (!border && border !== false) border = false;
 
   return (
     <Container border={border} >

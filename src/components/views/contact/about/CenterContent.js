@@ -17,8 +17,6 @@ const Container = styled.div`
   .no-content {
     height: 100%;
     flex: 0 1 30%;
-
-    background-color: black;
   }
 `;
 

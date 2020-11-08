@@ -29,7 +29,7 @@ const Title = styled.span`
   width: 100%;
 
   font-size: 1.8rem;
-  font-size: clamp(1.8rem, 3vw, 4rem);
+  font-size: clamp(1.8rem, 3vw, 3rem);
 
   z-index: 1;
   top: 120%;

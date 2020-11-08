@@ -38,7 +38,7 @@ const Container = styled.div`
     margin-right: 0;
     margin-bottom: calc(var(--margin-base) / 2);
     margin-left: 0;
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
   }
 
   .content {

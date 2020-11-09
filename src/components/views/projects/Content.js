@@ -5,8 +5,10 @@ import { removeFilePathSuffix, capitalizer, replaceDashWithSpace } from '../../.
 import getUsedTechIcons from '../../../utils/getUsedTechIcons';
 
 const StyledAnchorTag = styled.a`
-  flex: 1;
   position: relative;
+  overflow: hidden;
+  display: flex;
+  flex: 1;
 
   :hover {
     cursor: pointer;
@@ -22,38 +24,52 @@ const StyledAnchorTag = styled.a`
 `;
 
 const StyledLabel = styled.span`
-  color: var(--color-outer-space);
-
   position: absolute;
+  top: 120%;
+  left: 50%;
+  z-index: 1;
+
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 70%;
+  height: 19%;
+
+  background-color: var(--bg-eerie-black);
+  border-radius: var(--border-radius-sm);
+  padding: var(--padding-xs);
+
   font-family: 'Source Sans Pro', sans-serif;
   font-style: italic;
   font-weight: 700;
   letter-spacing: 1px;
+  font-size: 2vw;
+  white-space: nowrap;
+  color: var(--color-platinum);
 
-  text-align: center;
-  width: 100%;
-
-  font-size: 1.8rem;
-  font-size: clamp(1.8rem, 3vw, 3rem);
-
-  z-index: 1;
-  top: 120%;
-  left: 50%;
   transform: translate(-50%, -50%);
-
   transition: all 0.3s;
+
+  @media (max-width: 880px) {
+    font-size: 3vw;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const StyledIcons = styled.span`
   position: absolute;
-  width: 100%;
+  width: 102%;
+  height: 25%;
 
   z-index: 1;
   top: 160%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  color: var(--color-outer-space);
 
   transition: all 0.3s;
 
@@ -61,9 +77,26 @@ const StyledIcons = styled.span`
   flex-direction: row;
   justify-content: space-evenly;
 
+  background-color: var(--bg-eerie-black);
+  color: var(--color-platinum);
+
   svg {
-    height: 15%;
-    width: 15%;
+    align-self: center;
+    height: 85%;
+    width: 100%;
+  }
+
+  ::before {
+    content: '';
+    background-image: url('./man.svg');
+    background-size: cover;
+    z-index: 3;
+    position: absolute;
+    width: 12%;
+    height: 65%;
+    bottom: 100%;
+    right: 50%;
+    transform: translateX(50%);
   }
 `;
 

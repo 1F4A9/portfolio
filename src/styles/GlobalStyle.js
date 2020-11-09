@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
     --color-blue-sky: #16ADE3;
     --color-outer-space: #2E3440;
     --color-grey: #7F8080;
-    --color-user-input: #E5E6E6;
+    --color-platinum: #E5E6E6;
     --color-form: #252525;
 
     --padding-xs: 0.375rem;

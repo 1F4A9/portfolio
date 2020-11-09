@@ -9,13 +9,13 @@ const StyledInput = styled.input`
   border: none;
 
   background-color: var(--color-form);
-  color: var(--color-user-input);
+  color: var(--color-platinum);
 
   :-webkit-autofill,
   :-webkit-autofill:hover, 
   :-webkit-autofill:focus {
     transition: background-color 5000s;
-    -webkit-text-fill-color: var(--color-user-input) !important;
+    -webkit-text-fill-color: var(--color-platinum) !important;
   }
 `;
 
@@ -30,13 +30,13 @@ const StyledTextarea = styled.textarea`
   resize: none;
 
   background-color: var(--color-form);
-  color: var(--color-user-input);
+  color: var(--color-platinum);
 
   :-webkit-autofill,
   :-webkit-autofill:hover, 
   :-webkit-autofill:focus {
     transition: background-color 5000s;
-    -webkit-text-fill-color: var(--color-user-input) !important;
+    -webkit-text-fill-color: var(--color-platinum) !important;
   }
 `;
 

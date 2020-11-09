@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaUserGraduate, FaCheckSquare, FaHandPeace, FaHeart, FaGlasses } from 'react-icons/fa';
+import { FaUserGraduate, FaCheckSquare, FaHandPeace, FaHeart, FaGlasses, FaLightbulb } from 'react-icons/fa';
 
 import CenterContent from './CenterContent';
 import ParagraphContainer from './ParagraphContainer';
@@ -33,7 +33,7 @@ export default function About() {
     { icon: <FaUserGraduate />, paragraph: `Graduates in ${calcDiffInTimeWith('2021-05-28', 'days')} days` },
     { icon: <FaHeart />, paragraph: `Love of learning` },
     { icon: <FaGlasses />, paragraph: `Problem solver` },
-    { icon: <FaCheckSquare />, paragraph: `Creative` },
+    { icon: <FaLightbulb />, paragraph: `Creative` },
   ]
 
   return (

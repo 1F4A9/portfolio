@@ -32,6 +32,10 @@ module.exports = {
             family: `Source Sans Pro`,
             variants: [`400`, `600`, `700i`]
           },
+          {
+            family: `Bowlby One SC`,
+            variants: [`400`]
+          },
         ],
       },
     },

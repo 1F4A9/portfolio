@@ -41,11 +41,11 @@ const StyledLabel = styled.span`
   border-radius: var(--border-radius-sm);
   padding: var(--padding-xs);
 
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Bowlby One SC';
   font-style: italic;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 1px;
-  font-size: 2vw;
+  font-size: 1.8vw;
   white-space: nowrap;
   color: var(--color-platinum);
 
@@ -53,11 +53,11 @@ const StyledLabel = styled.span`
   transition: all 0.3s;
 
   @media (max-width: 880px) {
-    font-size: 3vw;
+    font-size: 2.2vw;
   }
 
   @media (max-width: 450px) {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 `;
 

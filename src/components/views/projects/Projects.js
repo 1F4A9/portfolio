@@ -14,6 +14,8 @@ const Container = styled.section`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+
+  margin-bottom: calc(var(--margin-base) + (var(--margin-sm) / 2));
 `;
 
 export default function Projects() {

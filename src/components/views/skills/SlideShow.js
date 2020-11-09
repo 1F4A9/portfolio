@@ -14,8 +14,8 @@ const slide = keyframes`
 const Container = styled.div`
   width: calc(87% + (var(--margin-base) * 5));
 
-  padding-top: calc(var(--padding-lg) + var(--padding-base));
-  padding-bottom: calc(var(--padding-lg) + var(--padding-base));
+  padding-top: calc(var(--padding-sm) + var(--padding-lg));
+  padding-bottom: calc(var(--padding-sm) + var(--padding-lg));
 
   position: relative;
   overflow-x: hidden;

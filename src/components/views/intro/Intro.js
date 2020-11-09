@@ -14,7 +14,7 @@ const Container = styled.header`
 
 export default function Intro() {
   return (
-    <Container>
+    <Container id="home">
       <Laptop />
     </Container>
   )

@@ -45,7 +45,7 @@ const Container = styled.section`
 
 export default function Skills() {
   return (
-    <Container>
+    <Container id="skills">
       {/* <SectionHeader options={{ title: 'skills', border: true }} /> */}
       <SlideShow>
         <Icons />

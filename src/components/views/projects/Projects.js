@@ -38,7 +38,7 @@ export default function Projects() {
   let files = data.allFile.edges;
 
   return (
-    <Container>
+    <Container id="projects">
       <SectionHeader options={{ title: 'projects', border: true }} />
       <Wrapper>
         {files.map(({ node }) => {

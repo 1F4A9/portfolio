@@ -16,7 +16,7 @@ const Container = styled.div`
   margin-top: var(--margin-lg);
   margin-right: var(--margin-lg);
 
-  z-index: 3;
+  z-index: 6;
   cursor: pointer;
   background-color: ${props => props.isMenuActive ? 'transparent' : 'var(--color-outer-space)'};
 

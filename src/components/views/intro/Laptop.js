@@ -15,6 +15,14 @@ const Container = styled.div`
 
     max-width: 1080px;
   }
+
+  @media (max-width: 880px) {
+    display: none;
+  }
+
+  @media (min-width: 881px) {
+    display: block;
+  }
 `;
 
 const Top = styled.div`

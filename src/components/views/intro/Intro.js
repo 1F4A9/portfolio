@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Laptop from './Laptop';
+import Mobile from './Mobile';
 
 const Container = styled.header`
   height: 100vh;
@@ -16,6 +17,7 @@ export default function Intro() {
   return (
     <Container id="home">
       <Laptop />
+      <Mobile />
     </Container>
   )
 }

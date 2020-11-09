@@ -18,7 +18,7 @@ const StyledAnchorTag = styled.a`
     }
 
     .project__icon {
-      top: 88%;
+      top: 91%;
     }
   }
 `;
@@ -27,7 +27,7 @@ const StyledLabel = styled.span`
   position: absolute;
   top: 120%;
   left: 50%;
-  z-index: 1;
+  z-index: 2;
 
   flex: 1;
   display: flex;
@@ -64,7 +64,7 @@ const StyledLabel = styled.span`
 const StyledIcons = styled.span`
   position: absolute;
   width: 102%;
-  height: 25%;
+  height: 20%;
 
   z-index: 1;
   top: 160%;
@@ -90,10 +90,9 @@ const StyledIcons = styled.span`
     content: '';
     background-image: url('./man.svg');
     background-size: cover;
-    z-index: 3;
     position: absolute;
-    width: 12%;
-    height: 65%;
+    width: 16%;
+    height: 108%;
     bottom: 100%;
     right: 50%;
     transform: translateX(50%);

@@ -38,7 +38,7 @@ export default function getUsedTechIcons(label) {
 
 
     if (isMatch) {
-      acc.push(icon.icon);
+      acc.push({ id: Math.random(), icon: icon.icon });
     }
 
     return acc;

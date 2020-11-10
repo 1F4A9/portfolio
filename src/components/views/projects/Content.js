@@ -109,9 +109,12 @@ export default function Content({ childImageSharp }) {
     <StyledAnchorTag href={`https://github.com/hipp0campus/${removeFilePathSuffix(originalName)}`} target="blank" >
       <StyledLabel className="project__label">{label}</StyledLabel>
       <StyledIcons className="project__icon">
-        {icons.map(icon => {
-          return icon
-        })}
+        {icons.map(({ icon, id }) => (
+          <React.Fragment key={id}>
+            {console.log(id)}
+            {icon}
+          </React.Fragment>
+        ))}
       </StyledIcons>
     </StyledAnchorTag>
   )

@@ -29,7 +29,7 @@ const StyledMobileDevice = styled.div`
   display: block;
 
   @media (max-width: 450px) {
-    min-height: 85%;
+    min-height: 90%;
   }
 `;
 
@@ -44,7 +44,7 @@ const SyledOuterFrame = styled.div`
   padding-left: 1px;
   padding-right: 1px;
   padding-top: calc(var(--padding-xs) / 2);
-  padding-bottom: calc(var(--padding-sm) / 2);
+  padding-bottom: calc(var(--padding-xs) / 2);
 
   background: rgb(9,9,9); 
   background: linear-gradient(to top, rgba(9,9,9,1) 0%, rgba(44,43,45,1) 98%, rgba(51,50,52,1) 99%, rgba(69,68,71,1) 100%);
@@ -54,7 +54,7 @@ const SyledOuterFrame = styled.div`
   box-shadow: 1px 1px 31px 0px rgba(0,0,0,0.34);
 
   // vol btn
-  ::before {
+  /* ::before {
     content: '';
     position: absolute;
     top: 17%;
@@ -64,10 +64,10 @@ const SyledOuterFrame = styled.div`
     background: rgb(76,76,76);
     background: linear-gradient(to right, rgba(34,34,34,1) 0%, rgba(44,44,45,1) 18%, rgba(53,53,55,1) 39%, rgba(73,72,77,1) 63%, rgba(135,134,139,1) 95%);
     border-radius: 2px;
-  }
+  } */
 
   // screen btn
-  ::after {
+  /* ::after {
     content: '';
     position: absolute;
     top: 37%;
@@ -77,7 +77,7 @@ const SyledOuterFrame = styled.div`
     background: rgb(76,76,76);
     background: linear-gradient(to right, rgba(34,34,34,1) 0%, rgba(44,44,45,1) 18%, rgba(53,53,55,1) 39%, rgba(73,72,77,1) 63%, rgba(135,134,139,1) 95%);
     border-radius: 2px;
-  }
+  } */
 
   @media (max-width: 450px) {
     width: 100%;

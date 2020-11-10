@@ -41,7 +41,13 @@ export default function About() {
       <CenterContent>
         <h2>About me</h2>
         <ProfilePicture />
-        {paragraphs.map(({ icon, paragraph }) => <ParagraphContainer icon={icon} paragraph={paragraph} />)}
+        {paragraphs.map(({ icon, paragraph }) => (
+          <ParagraphContainer
+            icon={icon}
+            paragraph={paragraph}
+            key={paragraph.split(' ')[0]}
+          />
+        ))}
       </CenterContent>
     </Container>
   )

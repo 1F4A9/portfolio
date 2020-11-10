@@ -111,7 +111,6 @@ export default function Content({ childImageSharp }) {
       <StyledIcons className="project__icon">
         {icons.map(({ icon, id }) => (
           <React.Fragment key={id}>
-            {console.log(id)}
             {icon}
           </React.Fragment>
         ))}

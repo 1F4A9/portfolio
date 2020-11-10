@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaUserGraduate, FaCheckSquare, FaHandPeace, FaHeart, FaGlasses, FaLightbulb } from 'react-icons/fa';
+import { FaUserGraduate, FaHandPeace, FaHeart, FaGlasses, FaLightbulb } from 'react-icons/fa';
 
 import CenterContent from './CenterContent';
 import ParagraphContainer from './ParagraphContainer';

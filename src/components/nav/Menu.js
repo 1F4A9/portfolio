@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { navigate } from '@reach/router';
 
 const Container = styled.div`
   height: 100vh;

@@ -5,6 +5,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# env vars
+.env
+
 **/*.un~
 **/.DS_Store
 **/.gitignore

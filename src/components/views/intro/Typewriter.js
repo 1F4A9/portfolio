@@ -93,7 +93,7 @@ export default function Typewriter() {
       let interval = setInterval(typer, 40);
       return () => clearInterval(interval);
     }
-  }, [index])
+  }, [index, count, typer])
 
   function typer() {
     let currentText = '';

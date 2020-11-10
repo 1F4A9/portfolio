@@ -11,6 +11,13 @@ const Container = styled.div`
   z-index: 1;
   overflow: hidden;
   pointer-events: none;
+
+  @media (max-width: 881px) {
+    display: block;
+  }
+  @media (min-width: 881px) {
+    display: none;
+  }
 `;
 
 const StyledSpan = styled.span`

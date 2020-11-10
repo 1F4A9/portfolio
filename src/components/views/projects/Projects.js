@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import Wrapper from './Wrapper';
-import SectionHeader from '../../shared/SectionHeader';
+import HeaderTitle from './HeaderTitle';
 import Background from './Background';
 import Content from './Content';
 
@@ -41,7 +41,7 @@ export default function Projects() {
 
   return (
     <Container id="projects">
-      <SectionHeader options={{ title: 'projects', border: true }} />
+      <HeaderTitle options={{ title: 'projects', border: true }} />
       <Wrapper>
         {files.map(({ node }) => {
           return (

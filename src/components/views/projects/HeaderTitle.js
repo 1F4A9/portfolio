@@ -62,7 +62,7 @@ const Container = styled.div`
   }
 `;
 
-export default function SectionHeader({ children, options }) {
+export default function HeaderTitle({ children, options }) {
   let { title, border } = options;
 
   if (!border && border !== false) border = false;

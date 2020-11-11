@@ -39,11 +39,9 @@ export default function Mail() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   function onSubmit(e) {
-    e.preventDefault();
+    // e.preventDefault();
 
     setIsSubmitted(true);
-
-    console.log(mailData)
   }
 
   const inputs = [
@@ -57,7 +55,7 @@ export default function Mail() {
     <Container className="mail-border" id="contact">
       <h2 className="full-text">Feel free to drop me an email</h2>
       <h2 className="short-text">Drop me an email</h2>
-      <form onSubmit={onSubmit} >
+      <form name="portfolio" onSubmit={onSubmit} method="POST" data-netlify="true" >
         {inputs.map(({ type, name, label }) => {
           return (
             <div className={`form-group ${type}`} key={name}>

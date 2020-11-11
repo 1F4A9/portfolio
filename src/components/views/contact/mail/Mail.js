@@ -54,7 +54,7 @@ export default function Mail() {
   ];
 
   return (
-    <Container className="mail-border">
+    <Container className="mail-border" id="contact">
       <h2 className="full-text">Feel free to drop me an email</h2>
       <h2 className="short-text">Drop me an email</h2>
       <form onSubmit={onSubmit} >

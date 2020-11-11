@@ -55,7 +55,7 @@ const Container = styled.footer`
 
 export default function Contact() {
   return (
-    <Container id="contact">
+    <Container>
       <About />
       <Mail />
     </Container>

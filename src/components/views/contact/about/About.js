@@ -37,7 +37,7 @@ export default function About() {
   ]
 
   return (
-    <Container className="about">
+    <Container className="about" id="about">
       <CenterContent>
         <h2>About me</h2>
         <ProfilePicture />

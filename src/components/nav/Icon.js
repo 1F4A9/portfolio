@@ -18,7 +18,7 @@ const Container = styled.div`
 
   z-index: 6;
   cursor: pointer;
-  background-color: ${props => props.isMenuActive ? 'transparent' : 'var(--color-outer-space)'};
+  background-color: ${props => props.isMenuActive ? 'transparent' : '#20242D'};
 
   :hover, 
   svg:hover {

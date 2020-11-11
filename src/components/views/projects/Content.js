@@ -99,6 +99,10 @@ const StyledIcons = styled.span`
   }
 `;
 
+function getLink(originalName) {
+  return `https://github.com/hipp0campus/${removeFilePathSuffix(originalName)}`;
+}
+
 export default function Content({ childImageSharp }) {
   let { fluid } = childImageSharp;
   let { originalName } = fluid;
@@ -106,7 +110,7 @@ export default function Content({ childImageSharp }) {
   let label = capitalizer(replaceDashWithSpace(removeFilePathSuffix(originalName)));
 
   return (
-    <StyledAnchorTag href={`https://github.com/hipp0campus/${removeFilePathSuffix(originalName)}`} target="blank" >
+    <StyledAnchorTag href={getLink(originalName)} title={getLink(originalName)} target="blank" >
       <StyledLabel className="project__label">{label}</StyledLabel>
       <StyledIcons className="project__icon">
         {icons.map(({ icon, id }) => (

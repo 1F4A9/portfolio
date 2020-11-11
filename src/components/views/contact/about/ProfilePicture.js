@@ -22,5 +22,5 @@ export default function ProfilePicture({ className }) {
     }
   `)
 
-  return <GatsbyImage className={className} fluid={data.file.childImageSharp.fluid} />
+  return <GatsbyImage className={className} fluid={data.file.childImageSharp.fluid} alt="me" />
 }

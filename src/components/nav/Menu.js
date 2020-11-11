@@ -20,6 +20,10 @@ const Container = styled.div`
 
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 880px) {
+    width: ${props => props.isMenuActive ? '100vw' : '0vw'};
+  }
 `;
 
 const LinkContainer = styled.span`
@@ -46,6 +50,10 @@ const LinkContainer = styled.span`
   svg {
     font-size: 1.4rem;
     margin-right: var(--margin-sm);
+  }
+
+  @media (max-width: 880px) {
+    padding-left: var(--padding-xxl);
   }
 `;
 

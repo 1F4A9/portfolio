@@ -29,7 +29,7 @@ const StyledMobileDevice = styled.div`
   display: block;
 
   @media (max-width: 450px) {
-    min-height: 80%;
+    min-height: 90%;
   }
 `;
 
@@ -49,35 +49,8 @@ const SyledOuterFrame = styled.div`
   background: rgb(9,9,9); 
   background: linear-gradient(to top, rgba(9,9,9,1) 0%, rgba(44,43,45,1) 98%, rgba(51,50,52,1) 99%, rgba(69,68,71,1) 100%);
   position: relative;
-  // background-color: #090909;
 
   box-shadow: 1px 1px 31px 0px rgba(0,0,0,0.34);
-
-  // vol btn
-  /* ::before {
-    content: '';
-    position: absolute;
-    top: 17%;
-    right: -3px;
-    width: 4px;
-    height: 100px;
-    background: rgb(76,76,76);
-    background: linear-gradient(to right, rgba(34,34,34,1) 0%, rgba(44,44,45,1) 18%, rgba(53,53,55,1) 39%, rgba(73,72,77,1) 63%, rgba(135,134,139,1) 95%);
-    border-radius: 2px;
-  } */
-
-  // screen btn
-  /* ::after {
-    content: '';
-    position: absolute;
-    top: 37%;
-    right: -3px;
-    width: 4px;
-    height: 50px;
-    background: rgb(76,76,76);
-    background: linear-gradient(to right, rgba(34,34,34,1) 0%, rgba(44,44,45,1) 18%, rgba(53,53,55,1) 39%, rgba(73,72,77,1) 63%, rgba(135,134,139,1) 95%);
-    border-radius: 2px;
-  } */
 
   @media (max-width: 450px) {
     width: 100%;

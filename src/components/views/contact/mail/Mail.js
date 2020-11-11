@@ -54,7 +54,6 @@ export default function Mail() {
       <h2 className="short-text">Drop me an email</h2>
       <form
         onSubmit={onSubmit}
-        action="/#contact"
         name="portfolio"
         method="POST"
         data-netlify="true"

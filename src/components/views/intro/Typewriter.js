@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 
-import { calcDiffInTimeWith } from '../../../utils/timeHandler';
-
 const blink = keyframes`
   0% {
     opacity: 0;
@@ -53,8 +51,30 @@ const Container = styled.div`
 
 const Paragraph = styled.p`
   color: var(--color-dark-sky);
-  font-size: 1.2rem;
+  font-size: 2.2rem;
   font-weight: 400;
+  position: relative;
+
+  a :last-of-type::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    right: -0.3125rem;
+    width: 1px;
+    height: 2.2rem;
+    border-right: 2px solid #537094;
+
+    animation: ${blink} 0.8s infinite ease;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+    cursor: pointer;
+    :hover {
+      text-decoration: underline;
+    }
+  }
 `;
 
 const Typing = styled(Paragraph)`
@@ -66,20 +86,34 @@ const Typing = styled(Paragraph)`
     top: 6px;
     right: -0.3125rem;
     width: 1px;
-    height: 1.1rem;
+    height: 2.2rem;
     border-right: 2px solid #537094;
 
     animation: ${blink} 0.8s infinite ease;
   }
 `;
 
+function findUrl(str) {
+  let reg = str.split(/(:\s)/i);
+
+  if (reg.length > 1) {
+    return (
+      <>
+        {reg[0] + reg[1]}
+        <a href={reg[2].replace('github', 'https://github')} title={reg[2]} target="blank">
+          {reg[2]}
+        </a>
+      </>
+    )
+  }
+
+  return reg[0];
+}
+
 let data = [
-  `Hello there... welcome to my portfolio.`,
-  `My name is Emil, I'm ${calcDiffInTimeWith('1994-10-16', 'years')} years old and live in Svedala, Sweden.`,
-  `I study front-end and will graduate in ${calcDiffInTimeWith('2021-05-28', 'days')} days.`,
-  `I have serious passion for solid solutions and  refuse to settle for anything less.`,
-  `I dream and speak Javascript, and no i'm not talking about nightmares ;-)`,
-  `The source code [gör till git länk].`,
+  `Hello there...`,
+  `Welcome to my portfolio.`,
+  `Source code: github.com/hipp0campus/portfolio`,
 ];
 
 export default function Typewriter() {
@@ -87,6 +121,7 @@ export default function Typewriter() {
   const [text, setText] = useState('');
   const [count, setCount] = useState(0);
   const [index, setIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
 
   useEffect(() => {
     if (index < data[count].length) {
@@ -114,7 +149,7 @@ export default function Typewriter() {
       setText('');
 
       // If done typing, end function.
-      if (count >= data.length - 1) return;
+      if (count >= data.length - 1) return setIsTyping(false);
 
       setCount(count + 1);
       setIndex(0);
@@ -123,8 +158,12 @@ export default function Typewriter() {
 
   return (
     <Container>
-      {paragraphs.map((paragraph, i) => <Paragraph key={i}>{paragraph}</Paragraph>)}
-      <Typing className="ignore-rhythm">{text}</Typing>
+      {paragraphs.map((paragraph, i) => (
+        <Paragraph key={i}>
+          {findUrl(paragraph)}
+        </Paragraph>
+      ))}
+      {isTyping && <Typing className="ignore-rhythm">{text}</Typing>}
     </Container>
   )
 }

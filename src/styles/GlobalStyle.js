@@ -49,6 +49,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     height: 100%;
     background-color: var(--bg-eerie-black);
+    scroll-behavior: smooth;
   }
 `;
 

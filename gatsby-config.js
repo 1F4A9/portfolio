@@ -3,7 +3,7 @@ const path = require(`path`);
 module.exports = {
   siteMetadata: {
     title: 'Portfolio',
-    description: 'My frontend dev portfolio',
+    description: 'Frontend dev portfolio',
     author: 'Emil Alm',
     siteUrl: 'https://frontdev.nu',
     lang: 'en'

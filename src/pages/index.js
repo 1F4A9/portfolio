@@ -24,6 +24,7 @@ export default function Index() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Portfolio</title>
+        <meta name="description" content="Frontend dev portfolio" />
       </Helmet>
       <Normalize />
       <GlobalStyle />

@@ -30,6 +30,7 @@ const StyledMobileDevice = styled.div`
 
   @media (max-width: 450px) {
     min-height: 90%;
+    flex: 1;
   }
 `;
 

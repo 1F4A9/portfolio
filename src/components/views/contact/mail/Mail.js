@@ -57,6 +57,7 @@ export default function Mail() {
       <h2 className="full-text">Feel free to drop me an email</h2>
       <h2 className="short-text">Drop me an email</h2>
       <form name="portfolio" onSubmit={onSubmit} method="POST" data-netlify="true" >
+        <input type="hidden" name="form-name" value="Contact Form" />
         {inputs.map(({ type, name, label }) => {
           return (
             <div className={`form-group ${type}`} key={name}>

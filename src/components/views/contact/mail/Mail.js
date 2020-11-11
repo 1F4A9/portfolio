@@ -47,7 +47,6 @@ export default function Mail() {
   const inputs = [
     { type: 'text', name: 'name', label: 'Name | Company' },
     { type: 'email', name: 'email', label: 'Email' },
-    { type: 'text', name: 'subject', label: 'Subject' },
     { type: 'textarea', name: 'message', label: 'Message' },
   ];
 

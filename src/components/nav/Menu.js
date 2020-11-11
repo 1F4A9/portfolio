@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 import { FaHome, FaCode } from 'react-icons/fa';
 import { MdWork, MdEmail } from 'react-icons/md';
 import { IoMdContact } from 'react-icons/io';
@@ -35,25 +36,25 @@ const LinkContainer = styled.span`
   :hover {
     color: var(--bg-eerie-black);
   }
-
-  a {
-    font-size: 1.2rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    color: inherit;
-    text-decoration: inherit;
-    cursor: pointer;
-    font-weight: 600;
+  
+  @media (max-width: 880px) {
+    padding-left: var(--padding-xxl);
   }
+`;
 
+const StyledLink = styled(Link)`
+  font-size: 1.2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: inherit;
+  cursor: pointer;
+  font-weight: 600;
+  
   svg {
     font-size: 1.4rem;
     margin-right: var(--margin-sm);
-  }
-
-  @media (max-width: 880px) {
-    padding-left: var(--padding-xxl);
   }
 `;
 
@@ -61,19 +62,19 @@ export default function Menu({ isMenuActive }) {
   return (
     <Container isMenuActive={isMenuActive} >
       <LinkContainer>
-        <a href="#home"><FaHome />Home</a>
+        <StyledLink to="#home"><FaHome />Home</StyledLink>
       </LinkContainer>
       <LinkContainer>
-        <a href="#projects"><MdWork />Projects</a>
+        <StyledLink to="#projects"><MdWork />Projects</StyledLink>
       </LinkContainer>
       <LinkContainer>
-        <a href="#skills"><FaCode />Skills</a>
+        <StyledLink to="#skills"><FaCode />Skills</StyledLink>
       </LinkContainer>
       <LinkContainer>
-        <a href="#about"><IoMdContact />About</a>
+        <StyledLink to="#about"><IoMdContact />About</StyledLink>
       </LinkContainer>
       <LinkContainer>
-        <a href="#contact"><MdEmail />Contact</a>
+        <StyledLink to="#contact"><MdEmail />Contact</StyledLink>
       </LinkContainer>
     </Container>
   )

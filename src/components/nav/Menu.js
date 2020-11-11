@@ -1,9 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FaHome, FaCode } from 'react-icons/fa';
+import { MdWork, MdEmail } from 'react-icons/md';
+import { IoMdContact } from 'react-icons/io';
 
 const Container = styled.div`
   height: 100vh;
   width: ${props => props.isMenuActive ? '30vw' : '0vw'};
+  padding-top: calc(var(--padding-lg) * 2 + 3rem);
 
   transition: 0.3s;
 
@@ -11,20 +15,58 @@ const Container = styled.div`
   right: 0;
   top: 0;
 
-  background-color: #86bfcf;
+  background-color: #34a1cd;
   z-index: 5;
 
   display: flex;
   flex-direction: column;
 `;
 
+const LinkContainer = styled.span`
+  padding: var(--padding-xs) var(--padding-xs) var(--padding-xs) var(--padding-lg);
+  margin-bottom: 1.45rem;
+  color: var(--bg-off-white);
+  transition: color 0.15s ease-out;
+
+  :hover {
+    color: var(--bg-eerie-black);
+  }
+
+  a {
+    font-size: 1.2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: inherit;
+    text-decoration: inherit;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  svg {
+    font-size: 1.4rem;
+    margin-right: var(--margin-sm);
+  }
+`;
+
 export default function Menu({ isMenuActive }) {
   return (
     <Container isMenuActive={isMenuActive} >
-      <a href="#home">Home</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+      <LinkContainer>
+        <a href="#home"><FaHome />Home</a>
+      </LinkContainer>
+      <LinkContainer>
+        <a href="#projects"><MdWork />Projects</a>
+      </LinkContainer>
+      <LinkContainer>
+        <a href="#skills"><FaCode />Skills</a>
+      </LinkContainer>
+      <LinkContainer>
+        <a href="#about"><IoMdContact />About</a>
+      </LinkContainer>
+      <LinkContainer>
+        <a href="#contact"><MdEmail />Contact</a>
+      </LinkContainer>
     </Container>
   )
 }

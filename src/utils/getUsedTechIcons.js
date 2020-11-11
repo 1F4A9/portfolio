@@ -10,11 +10,11 @@ export default function getUsedTechIcons(label) {
       icon: <FaReact />
     },
     {
-      match: ['trello-clone', 'chat-app'],
+      match: ['trello-clone', 'chat-app', 'bug-reporter'],
       icon: <FaNode />
     },
     {
-      match: [],
+      match: ['bug-reporter'],
       icon: <FaSass />
     },
     {
@@ -28,7 +28,7 @@ export default function getUsedTechIcons(label) {
     },
     {
       match:
-        [], icon:
+        ['bug-reporter'], icon:
         <SiJavascript />
     }
   ]

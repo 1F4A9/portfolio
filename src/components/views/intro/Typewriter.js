@@ -59,8 +59,9 @@ const Paragraph = styled.p`
     color: inherit;
     text-decoration: inherit;
     cursor: pointer;
+    text-decoration: underline;
     :hover {
-      text-decoration: underline;
+      color: var(--color-platinum);
     }
 
     ::after {
@@ -103,27 +104,27 @@ const Typing = styled(Paragraph)`
   } 
 `;
 
-function findUrl(str) {
-  let reg = str.split(/(:\s)/i);
+function createAnchorTagIf(str) {
+  const url = 'https://github.com/hipp0campus/portfolio';
+  let reg = str.match(/(code)/i);
 
-  if (reg.length > 1) {
+  if (reg) {
     return (
       <>
-        {reg[0] + reg[1]}<br />
-        <a href={reg[2].replace('github', 'https://github')} title={reg[2]} target="blank">
-          {reg[2]}
+        <a href={url} title={url} target="blank">
+          {str}
         </a>
       </>
     )
   }
 
-  return reg[0];
+  return str;
 }
 
 let data = [
   `Hello there...`,
   `Welcome to my portfolio.`,
-  `Source code: github.com/hipp0campus/portfolio`,
+  `View source code.`,
 ];
 
 export default function Typewriter() {
@@ -170,7 +171,7 @@ export default function Typewriter() {
     <Container>
       {paragraphs.map((paragraph, i) => (
         <Paragraph key={i}>
-          {findUrl(paragraph)}
+          {createAnchorTagIf(paragraph)}
         </Paragraph>
       ))}
       {isTyping && <Typing className="ignore-rhythm">{text}</Typing>}

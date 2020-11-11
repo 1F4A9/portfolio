@@ -38,9 +38,7 @@ export default function Mail() {
   const [mailData, setMailData] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  function onSubmit(e) {
-    // e.preventDefault();
-
+  function onSubmit() {
     setIsSubmitted(true);
   }
 
@@ -50,13 +48,18 @@ export default function Mail() {
     { type: 'textarea', name: 'message', label: 'Message' },
   ];
 
-  // action="/#contact"
-
   return (
     <Container className="mail-border" id="contact">
       <h2 className="full-text">Feel free to drop me an email</h2>
       <h2 className="short-text">Drop me an email</h2>
-      <form name="portfolio" method="POST" data-netlify="true" netlify-honeypot="bot-field" >
+      <form
+        onSubmit={onSubmit}
+        action="/#contact"
+        name="portfolio"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+      >
         <input type="hidden" name="form-name" value="portfolio" />
         {inputs.map(({ type, name, label }) => {
           return (

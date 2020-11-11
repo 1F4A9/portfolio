@@ -29,7 +29,7 @@ const StyledMobileDevice = styled.div`
   display: block;
 
   @media (max-width: 450px) {
-    min-height: 90%;
+    min-height: 80%;
   }
 `;
 

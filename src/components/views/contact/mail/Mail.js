@@ -51,6 +51,8 @@ export default function Mail() {
     { type: 'textarea', name: 'message', label: 'Message' },
   ];
 
+  // action="/#contact"
+
   return (
     <Container className="mail-border" id="contact">
       <h2 className="full-text">Feel free to drop me an email</h2>

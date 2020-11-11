@@ -61,7 +61,7 @@ const Paragraph = styled.p`
     top: 6px;
     right: -0.3125rem;
     width: 1px;
-    height: 2.2rem;
+    height: inherit;
     border-right: 2px solid #537094;
 
     animation: ${blink} 0.8s infinite ease;
@@ -75,6 +75,12 @@ const Paragraph = styled.p`
       text-decoration: underline;
     }
   }
+
+  @media (max-width: 880px) {
+    font-size: 1.2rem;
+
+    a { word-break: break-word; }
+  } 
 `;
 
 const Typing = styled(Paragraph)`

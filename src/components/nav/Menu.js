@@ -58,24 +58,26 @@ const StyledLink = styled(Link)`
   }
 `;
 
-export default function Menu({ isMenuActive }) {
+const links = [
+  { to: '#home', label: 'Home', icon: <FaHome /> },
+  { to: '#projects', label: 'Projects', icon: <MdWork /> },
+  { to: '#skills', label: 'Skills', icon: <FaCode /> },
+  { to: '#about', label: 'About', icon: <IoMdContact /> },
+  { to: '#contact', label: 'Contact', icon: <MdEmail /> },
+]
+
+export default function Menu({ isMenuActive, setIsMenuActive }) {
+  function onClick() {
+    setIsMenuActive(false);
+  }
+
   return (
     <Container isMenuActive={isMenuActive} >
-      <LinkContainer>
-        <StyledLink to="#home"><FaHome />Home</StyledLink>
-      </LinkContainer>
-      <LinkContainer>
-        <StyledLink to="#projects"><MdWork />Projects</StyledLink>
-      </LinkContainer>
-      <LinkContainer>
-        <StyledLink to="#skills"><FaCode />Skills</StyledLink>
-      </LinkContainer>
-      <LinkContainer>
-        <StyledLink to="#about"><IoMdContact />About</StyledLink>
-      </LinkContainer>
-      <LinkContainer>
-        <StyledLink to="#contact"><MdEmail />Contact</StyledLink>
-      </LinkContainer>
+      {links.map(({ to, label, icon }) => (
+        <LinkContainer key={to} >
+          <StyledLink to={to} onClick={onClick}>{icon}{label}</StyledLink>
+        </LinkContainer>
+      ))}
     </Container>
   )
 }

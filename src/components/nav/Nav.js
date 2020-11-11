@@ -14,7 +14,7 @@ export default function Nav() {
   return (
     <Container>
       <Icon isMenuActive={isMenuActive} setIsMenuActive={setIsMenuActive} />
-      <Menu isMenuActive={isMenuActive} />
+      <Menu isMenuActive={isMenuActive} setIsMenuActive={setIsMenuActive} />
     </Container>
   )
 }

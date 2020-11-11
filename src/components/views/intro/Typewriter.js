@@ -53,33 +53,33 @@ const Paragraph = styled.p`
   color: var(--color-dark-sky);
   font-size: 2.2rem;
   font-weight: 400;
-  position: relative;
-
-  a :last-of-type::after {
-    content: '';
-    position: absolute;
-    top: 6px;
-    right: -0.3125rem;
-    width: 1px;
-    height: inherit;
-    border-right: 2px solid #537094;
-
-    animation: ${blink} 0.8s infinite ease;
-  }
 
   a {
+    position: relative;
     color: inherit;
     text-decoration: inherit;
     cursor: pointer;
     :hover {
       text-decoration: underline;
     }
+
+    ::after {
+      content: '';
+      position: absolute;
+      top: 6px;
+      right: -0.3125rem;
+      width: 1px;
+      height: 2.2rem;
+      border-right: 2px solid #537094;
+
+      animation: ${blink} 0.8s infinite ease;
+    }
   }
 
   @media (max-width: 880px) {
     font-size: 1.2rem;
 
-    a { word-break: break-word; }
+    a::after { height: 1.2rem; top: 3px; }
   } 
 `;
 
@@ -97,6 +97,10 @@ const Typing = styled(Paragraph)`
 
     animation: ${blink} 0.8s infinite ease;
   }
+
+  @media (max-width: 880px) {
+    ::after { height: 1.2rem; }
+  } 
 `;
 
 function findUrl(str) {
@@ -105,7 +109,7 @@ function findUrl(str) {
   if (reg.length > 1) {
     return (
       <>
-        {reg[0] + reg[1]}
+        {reg[0] + reg[1]}<br />
         <a href={reg[2].replace('github', 'https://github')} title={reg[2]} target="blank">
           {reg[2]}
         </a>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const blink = keyframes`
@@ -106,7 +106,7 @@ const Typing = styled(Paragraph)`
 
 function createAnchorTagIf(str) {
   const url = 'https://github.com/hipp0campus/portfolio';
-  let reg = str.match(/(code)/i);
+  let reg = str.match(/(source)/i);
 
   if (reg) {
     return (
@@ -122,9 +122,11 @@ function createAnchorTagIf(str) {
 }
 
 let data = [
-  `Hello there...`,
+  `Hello world.`,
   `Welcome to my portfolio.`,
-  `View source code.`,
+  `My name is Emil, I'm a frontend student from sweden.`,
+  `I'm currently looking for an internship.`,
+  `View source code here.`,
 ];
 
 export default function Typewriter() {
@@ -134,38 +136,41 @@ export default function Typewriter() {
   const [index, setIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
 
+  const typer = useCallback(
+    () => {
+      let currentText = '';
+      let letter = '';
+
+      currentText = data[count];
+      letter = currentText.slice(0, index + 1);
+
+      setIndex(index + 1);
+
+      setText(letter);
+
+      if (letter.length === currentText.length) {
+        let paragraph = [...paragraphs];
+        paragraph.push(letter);
+        setParagraphs(paragraph);
+
+        setText('');
+
+        // If done typing, end function.
+        if (count >= data.length - 1) return setIsTyping(false);
+
+        setCount(count + 1);
+        setIndex(0);
+      }
+    },
+    [paragraphs, count, index],
+  );
+
   useEffect(() => {
     if (index < data[count].length) {
       let interval = setInterval(typer, 40);
       return () => clearInterval(interval);
     }
   }, [index, count, typer])
-
-  function typer() {
-    let currentText = '';
-    let letter = '';
-
-    currentText = data[count];
-    letter = currentText.slice(0, index + 1);
-
-    setIndex(index + 1);
-
-    setText(letter);
-
-    if (letter.length === currentText.length) {
-      let paragraph = [...paragraphs];
-      paragraph.push(letter);
-      setParagraphs(paragraph);
-
-      setText('');
-
-      // If done typing, end function.
-      if (count >= data.length - 1) return setIsTyping(false);
-
-      setCount(count + 1);
-      setIndex(0);
-    }
-  }
 
   return (
     <Container>

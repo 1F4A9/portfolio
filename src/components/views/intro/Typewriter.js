@@ -126,7 +126,7 @@ let data = [
   `Welcome to my portfolio.`,
   `My name is Emil, I'm a frontend student from sweden.`,
   `I'm currently looking for an internship.`,
-  `Click to view this source code.`,
+  `Click to view source code.`,
 ];
 
 export default function Typewriter() {

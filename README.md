@@ -2,9 +2,10 @@
 
 ## Checkout website ⚡
 
-👉 `The website is not available yet` 👈
+👉 [frontdev.nu](https://frontdev.nu) 👈
 <br/>
 
 ## Technologies ✨
 * Gatsby
+* React
 * Styled-components

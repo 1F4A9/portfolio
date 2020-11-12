@@ -2,7 +2,7 @@
 
 ## Checkout website ⚡
 
-👉 [https://frontdev.nu](frontdev.nu) 👈
+👉 [frontdev.nu](https://frontdev.nu) 👈
 <br/>
 
 ## Technologies ✨

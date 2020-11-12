@@ -163,7 +163,7 @@ export default function Typewriter() {
       }
     },
     [paragraphs, count, index],
-  );
+  )
 
   useEffect(() => {
     if (index < data[count].length) {

@@ -122,7 +122,7 @@ function createAnchorTagIf(str) {
 }
 
 let data = [
-  `Hello world.`,
+  `Hello world!`,
   `Welcome to my portfolio.`,
   `My name is Emil, I'm a frontend student from sweden.`,
   `I'm currently looking for an internship.`,

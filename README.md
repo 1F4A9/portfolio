@@ -10,7 +10,7 @@
 * React
 * Styled-components
 
-Browser compatibility :globe_with_meridians:
+## Browser compatibility :globe_with_meridians:
 * safari v11+
 * firefox
 * chrome

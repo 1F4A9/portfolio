@@ -43,23 +43,33 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Open Sans Condensed`,
-            variants: [`700`]
-          },
-          {
-            family: `Source Sans Pro`,
-            variants: [`400`, `600`]
-          },
-          {
-            family: `Bowlby One SC`,
-            variants: [`400`]
-          },
+          `Open Sans Condensed\:700`,
+          `Source Sans Pro\:400,600`,
+          `Bowlby One SC\:400`,
         ],
       },
     },
+    // {
+    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: `Open Sans Condensed`,
+    //         variants: [`700`]
+    //       },
+    //       {
+    //         family: `Source Sans Pro`,
+    //         variants: [`400`, `600`]
+    //       },
+    //       {
+    //         family: `Bowlby One SC`,
+    //         variants: [`400`]
+    //       },
+    //     ],
+    //   },
+    // },
   ],
 }

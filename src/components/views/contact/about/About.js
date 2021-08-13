@@ -29,8 +29,8 @@ const Container = styled.div`
 export default function About() {
 
   const paragraphs = [
-    { icon: <FaHandPeace />, paragraph: `Frontend student` },
-    { icon: <FaUserGraduate />, paragraph: `Graduates in ${calcDiffInTimeWith('2021-05-28', 'days')} days` },
+    { icon: <FaHandPeace />, paragraph: `Front-end developer` },
+    { icon: <FaUserGraduate />, paragraph: `${calcDiffInTimeWith('2021-05-28', 'days')} days since graduation` },
     { icon: <FaHeart />, paragraph: `Love of learning` },
     { icon: <FaGlasses />, paragraph: `Problem solver` },
     { icon: <FaLightbulb />, paragraph: `Creative` },

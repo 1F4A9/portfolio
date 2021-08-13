@@ -122,10 +122,10 @@ function createAnchorTagIf(str) {
 }
 
 let data = [
-  `Hello world!`,
-  `Welcome to my portfolio.`,
-  `My name is Emil, I'm a frontend student from sweden.`,
-  `Click to view source code.`,
+  `Hello there and welcome to my simple site.`,
+  `My name is Emil and I work as a front-end consultant. I have a passion for UI, clean code and solid solutions. If you're reading this you probably already seen my CV, if not feel free to contact me.`,
+  `Anyhow, I'm always thrilled to take on new challenges. Your new consultant is just an email away!`,
+  `Click here to view the source code of this site.`,
 ];
 
 export default function Typewriter() {

@@ -51,7 +51,7 @@ const Container = styled.section`
 export default function Skills() {
   return (
     <Container id="skills">
-      <h2>knowledge in</h2>
+      <h2>knowledge of</h2>
       <SlideShow>
         <Icons />
         <Icons />

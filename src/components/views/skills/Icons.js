@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FaReact, FaNode, FaSass, FaHtml5, FaCss3Alt, FaGithub } from 'react-icons/fa';
-import { SiJavascript, SiGatsby, SiStyledComponents } from "react-icons/si";
-import { RiStackFill } from "react-icons/ri";
+import { SiJavascript, SiGatsby, SiStyledComponents, SiTypescript } from "react-icons/si";
 
 const Container = styled.div`
   display: flex;
@@ -35,7 +34,7 @@ export default function Icons() {
     { icon: <SiJavascript />, title: 'Javascript' },
     { icon: <FaReact />, title: 'React.js' },
     { icon: <FaNode />, title: 'Node.js' },
-    { icon: <RiStackFill />, title: 'Rest API' },
+    { icon: <SiTypescript />, title: 'TypeScript' },
     { icon: <SiGatsby />, title: 'Gatsby.js' },
     { icon: <FaHtml5 />, title: 'HTML' },
     { icon: <FaCss3Alt />, title: 'CSS' },

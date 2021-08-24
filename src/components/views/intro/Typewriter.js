@@ -122,7 +122,7 @@ function createAnchorTagIf(str) {
 }
 
 let data = [
-  `Hello there and welcome to my simple site.`,
+  `Hello there and welcome to my portfolio.`,
   `My name is Emil and I work as a front-end consultant. I have a passion for UI, clean code and solid solutions. If you're reading this you probably already seen my CV, if not feel free to contact me.`,
   `Anyhow, I'm always thrilled to take on new challenges. Your new consultant is just an email away!`,
   `Click here to view the source code of this site.`,
